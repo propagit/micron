@@ -158,3 +158,37 @@ label{
 	display:inline;	
 }
 
+/** Tab Elements */
+.nav-tabs {
+	border-bottom: 2px solid #B7DB27;
+}
+.nav-tabs > li a {
+	color: gray;
+}
+.nav-tabs > li.active a,
+.nav-tabs > li.active a:hover,
+.nav-tabs > li.active a:focus {
+	outline: none;
+	border: 0;
+}
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus {
+	outline: none;
+	background: transparent;
+	border-color: transparent;
+}
+.nav-tabs > li:hover a:before,
+.nav-tabs > li.active a:before {
+	text-align: center;
+	margin-left: -15px;
+	content: "\f0d8";
+	font-family: FontAwesome;
+	display: block;
+	height: 27px;
+	line-height: normal;
+	width: 100%;
+	position: absolute;
+	bottom: -14px;
+	font-size: 20px;
+	color: #B7DB27;
+}
