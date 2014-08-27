@@ -1,0 +1,65 @@
+/* CSS Document */
+
+/**  
+	The sytles in this file are only for demonstration and documentation purpose 
+	Do not include this file in your production project
+
+*/
+hr{
+	border-bottom:1px solid #ddd;
+	border-top:0;	
+}
+section{
+	margin-bottom:20px;
+	float:left;
+	width:100%;	
+}
+
+.demo-fa{
+	padding-top:5px;
+	padding-bottom:5px;	
+}
+.demo-fa a{
+	color:#000;	
+}
+
+.example{
+	margin-right: 0;
+	margin-left: 0;
+	background-color: #fff;
+	border-color: #ddd;
+	border-width: 1px;
+	-webkit-box-shadow: none;
+	box-shadow: none;	
+	border-style:solid;
+	padding-top:45px;
+	padding-bottom:15px;
+}
+
+.ex-top{
+	border-radius: 4px 4px 0 0;
+}
+.ex-bottom{
+	border-radius: 0 0 4px 4px;
+	border-top:none;
+}
+.example .bottom{
+	border-radius: 0 0 4px 4px;
+}
+.example:after {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	font-size: 12px;
+	font-weight: 700;
+	color: #959595;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding-bottom:15px;
+}
+.ex-top:after{
+	content: "Example";
+}
+.ex-bottom:after{
+	content: "How to Use";
+}

@@ -1,0 +1,83 @@
+@import url("styles.css");
+/* CSS Document */
+html, body{
+    height: 100%;
+	color:#fafafa;
+}
+/** form elements */
+.login-form ::-webkit-input-placeholder {
+   color: #c7c7c7;
+}
+
+.login-form :-moz-placeholder { /* Firefox 18- */
+   color: #c7c7c7; 
+}
+
+.login-form ::-moz-placeholder {  /* Firefox 19+ */
+   color: #c7c7c7; 
+}
+
+.login-form :-ms-input-placeholder {  
+   color: #c7c7c7; 
+}
+
+.login-form label{
+	color:#fafafa;
+	font-weight:400;	
+}
+.login-form .form-control{
+	border-radius:0;	
+	color:#fafafa;
+	background-color:#2a2a2a;
+	box-shadow:none;
+	border-color:#2a2a2a;
+	border-width: 1px;
+	padding: 18px 12px;
+}
+
+.box{
+	height:50%;
+	float:left;
+	width:100%;	
+	min-height:300px;
+}
+.valign{
+	display: inline-block;
+    height: 100%;
+    vertical-align: middle;	
+}
+.logo{
+    max-height: 161px;
+    vertical-align: middle;
+}
+h3{
+	font-size: 20px;
+	font-weight: 100;
+	color: #fff;
+	margin-top: -40px;
+	margin-bottom: 0;	
+}
+
+.login-form{
+	max-width:320px;
+	margin:20px auto;	
+}
+
+.btn{
+	min-width:100px;	
+}
+.login-ckbox{
+	margin-top:0;
+	margin-bottom:0;
+}
+.login-ckbox label span{
+	display:inline-block;
+	padding-left:10px;	
+}
+.valign-m{
+	line-height:32px;	
+}
+
+
+
+

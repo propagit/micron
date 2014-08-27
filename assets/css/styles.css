@@ -1,2 +1,160 @@
 /* CSS Document */
 
+/** 
+	Abbrs
+	
+	bs = bootstrap
+
+
+*/
+
+body,
+p{
+	color:#1d1d1d;	
+}
+
+a{
+	color:#b7db27;		
+}
+
+a:hover,
+a:focus,
+a:active,
+a.active{
+	color:#b7db27;		
+}
+
+/** backgrounds */
+.primary-bg{
+	background-color:#000000;	
+}
+.secondary-bg{
+	background-color:#1a1a1a;	
+}
+.white-bg{
+	background-color:#fff;	
+}
+
+
+/** buttons */
+.btn{
+	border-radius:0;	
+	color:#1d1d1d;
+}
+.btn-default{
+	/** bs default */	
+}
+.btn-info{
+	/** bs default */	
+}
+.btn-success{
+	background-color:#badc1b;
+	border-color: #d9f95f;	
+}
+.btn-warning{
+	/** bs default */	
+}
+.btn-danger{
+	/** bs default */	
+}
+.btn-default-alt{
+	background-color:#bdbdbd;
+	border-color: #bdbdbd;	
+}
+
+
+.btn-success:hover,
+.btn-success:focus,
+.btn-success.active,
+.btn-success:active{
+	background-color:#badc1b;
+	border-color: #d9f95f;	
+}
+	
+.btn-default-alt:hover,
+.btn-default-alt:focus,
+.btn-default-alt.active,
+.btn-default-alt:active{
+	background-color:#fff;
+	border-color:#adadad;
+	color: #1d1d1d;	
+}
+
+/** form elements */
+::-webkit-input-placeholder {
+   color: #1d1d1d;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #1d1d1d; 
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #1d1d1d; 
+}
+
+:-ms-input-placeholder {  
+   color: #1d1d1d; 
+}
+
+label{
+	color:#919191;
+	font-weight:400;	
+}
+.form-control{
+	border-radius:0;	
+	color:#1d1d1d;
+	background-color:#fafafa;
+	box-shadow:none;
+	border-color:#e3e3e3;
+	border-width: 2px;
+	padding: 18px 12px;
+}
+
+
+
+/** helper classes - bs overwrites */
+
+.text-muted{
+	/** bs default */	
+}
+.text-primary{
+	color:#1d1d1d;
+}
+.text-success{
+	color:#b7db27;	
+}
+.text-success-alt{
+	color:#66d74c;	
+}
+.text-info{
+	color:#3088cd;
+}
+.text-warning{
+	color:#ffe827;
+}
+.text-warning-alt{
+	color:#fdad50;	
+}
+.text-danger{
+	color:#d2392a;
+}
+.text-white{
+	color:#fafafa;	
+}
+.center{
+	text-align:center;	
+}
+.inline-block{
+	display:inline-block;	
+}
+.pull{
+	float:right;	
+}
+.push{
+	float:left;	
+}
+.inline{
+	display:inline;	
+}
+
