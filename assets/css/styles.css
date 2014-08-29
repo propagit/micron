@@ -33,6 +33,9 @@ aside{
 	width:345px;	
 }
 
+.clear {
+	clear: both;
+}
 
 /** Top Header */
 #header{
@@ -194,6 +197,85 @@ nav .nav li a .fa{
 	padding-bottom:10px;	
 }
 
+/** table */
+.table i.fa {
+	margin-right: 5px;
+}
+
+.col-center {
+	text-align: center;
+}
+
+/** popover */
+.popover.popover-options {
+	margin-top: -27px;
+	border-radius: 0;
+	padding: 0;
+	border-color: #eee;
+}
+.popover.popover-options .popover-inner {
+	border-radius: 0;
+}
+.popover.popover-options .popover-title {
+	font-weight: bold;
+	border-radius: 0;
+}
+/** dropdown menu */
+.btn-group-action .dropdown-menu {
+	margin-bottom: 3px;
+}
+.btn-group-action .dropdown-menu {
+	border-radius: 0;
+}
+.btn-group-action .dropdown-menu li a i.fa {
+	width: 20px;
+}
+.btn-group label {
+	line-height: 33px;
+	margin-right: 10px;
+}
+.btn-group-autowidth .dropdown-menu {
+	min-width: 0;
+}
+.btn-group-action .dropdown-menu li a:hover {
+	background: #B7DB27;
+}
+
+/** datatables */
+.dataTables_filter {
+	float: right;
+}
+.dataTables_length {
+	float: right;
+}
+.paginate_button {
+	padding: 3px 8px;
+	border: 1px solid #ccc;
+	margin: 2px;
+	color: #666;
+	font-weight: normal;
+}
+.paginate_button.current {
+	color: #000;
+	font-weight: bold;
+}
+.dataTables_length label select {
+	margin-left: 5px;
+}
+
+/** pagination */
+.pagination {
+	margin: 0;
+}
+.pagination > li:first-child a,
+.pagination > li:last-child a {
+	
+	border-radius: 0;
+}
+.pagination > li a {
+	padding: 3px 8px;
+	margin: 2px;
+}
 
 /** buttons */
 .btn{
