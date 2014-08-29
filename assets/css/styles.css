@@ -7,6 +7,11 @@
 
 
 */
+body,
+html{
+	min-height:100%;	
+	background-color:#1a1a1a;
+}
 
 body,
 p{
@@ -40,7 +45,7 @@ aside{
 }
 
 #left-panel{
-	position: absolute;
+	position:absolute;
 	top: 0;
 	left: 0;
 	z-index: 904;
@@ -145,8 +150,9 @@ nav a{
 nav .nav li a{
 	padding:10px 25px;	
 }
-nav .nav > li > a > .fa{
-	min-width:35px;	
+nav .nav > li > a > .fa-fw{
+	width:35px;	
+	text-align:left;
 }
 nav .nav li a{
 	font-size: 150%;
@@ -265,9 +271,26 @@ label{
 }
 
 /** Content */
-#main-content{
-	margin-left:345px;
-	padding-top:45px;	
+#main{
+	margin-left: 345px;
+	padding-top: 45px;
+}
+#content{
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top:15px;
+	width:100%;
+	float:left;
+	min-height:1000px;
+	background-color:#fff;
+}
+
+/** Modal */
+.modal-title > span{
+	margin-top: 5px;
+	position: absolute;
+	display: inline-block;
+	margin-left: 15px;	
 }
 
 /** Tablet */
@@ -286,12 +309,53 @@ label{
 	nav > ul > li{
 		height:50px;	
 	}
+	#main{
+		margin-left:70px;	
+	}
+}
+
+
+/** Tab Elements */
+.nav-tabs {
+	border-bottom: 2px solid #B7DB27;
+}
+.nav-tabs > li a {
+	color: gray;
+}
+.nav-tabs > li.active a,
+.nav-tabs > li.active a:hover,
+.nav-tabs > li.active a:focus {
+	outline: none;
+	border: 0;
+}
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus {
+	outline: none;
+	background: transparent;
+	border-color: transparent;
+}
+.nav-tabs > li:hover a:before,
+.nav-tabs > li.active a:before {
+	text-align: center;
+	margin-left: -15px;
+	content: "\f0d8";
+	font-family: FontAwesome;
+	display: block;
+	height: 27px;
+	line-height: normal;
+	width: 100%;
+	position: absolute;
+	bottom: -14px;
+	font-size: 20px;
+	color: #B7DB27;
 }
 
 
 
 /** helper classes - bs overwrites */
-
+#content .page-header{
+	margin-top:0;	
+}
 .text-muted{
 	/** bs default */	
 }
@@ -338,37 +402,3 @@ label{
 	display:inline;	
 }
 
-/** Tab Elements */
-.nav-tabs {
-	border-bottom: 2px solid #B7DB27;
-}
-.nav-tabs > li a {
-	color: gray;
-}
-.nav-tabs > li.active a,
-.nav-tabs > li.active a:hover,
-.nav-tabs > li.active a:focus {
-	outline: none;
-	border: 0;
-}
-.nav-tabs > li > a:hover,
-.nav-tabs > li > a:focus {
-	outline: none;
-	background: transparent;
-	border-color: transparent;
-}
-.nav-tabs > li:hover a:before,
-.nav-tabs > li.active a:before {
-	text-align: center;
-	margin-left: -15px;
-	content: "\f0d8";
-	font-family: FontAwesome;
-	display: block;
-	height: 27px;
-	line-height: normal;
-	width: 100%;
-	position: absolute;
-	bottom: -14px;
-	font-size: 20px;
-	color: #B7DB27;
-}

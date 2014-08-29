@@ -63,3 +63,10 @@ section{
 .ex-bottom:after{
 	content: "How to Use";
 }
+.demo-wrap .modal{
+	display:block !important;
+	position:relative;	
+}
+.demo-wrap .modal .modal-dialog{
+	margin:30px 40px 50px 20px!important;
+}
