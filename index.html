@@ -129,7 +129,9 @@ $(function(){
 	
 	// load the current url
 	var hash = window.location.hash;
-	$('#content').load(hash.substring(1));
+	if(hash){
+		$('#content').load(hash.substring(1));
+	}
 });
 
 function load_content(obj){
