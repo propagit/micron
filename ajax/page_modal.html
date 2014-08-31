@@ -1,0 +1,66 @@
+<!-- Button trigger modal -->
+<button class="btn btn-success btn-lg pageModal" data-target="#myModal">
+  Launch demo modal
+</button>
+
+<!-- Modal 1 -->
+<div class="modal fade page-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close closePM" data-close="#myModal"><i class="fa fa-times"></i><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel"><i class="fa fa-users fa-2x text-success"></i> <span>Modal title</span></h4>
+      </div>
+      <div class="modal-body">
+<pre>      
+Discovery[edit]
+"Lorem ipsum" text is derived from sections 1.10.32–3 of Cicero's De finibus bonorum et malorum (On the Ends of Goods and Evils, or alternatively [About] The Purposes of Good and Evil).[2] The original passage began: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci velit (translation: "Neither is there anyone who loves, pursues or desires pain itself because it is pain").
+
+It is not known exactly when the text acquired its current standard form; it may have been as late as the 1960s. Dr. Richard McClintock, a Latin scholar who was the publications director at Hampden-Sydney College in Virginia, discovered the source of the passage sometime before 1982 while searching for instances of the Latin word "consectetur", rarely used in classical literature.[1][a] The physical source of the Lorem Ipsum text may be the 1914 Loeb Classical Library Edition of the De Finibus, where the Latin text finishes page 34 with "Neque porro quisquam est qui do-" and begins page 36 with "lorem ipsum (et seq.)…", suggesting that the galley type of that page was scrambled to make the dummy text seen today.
+
+<button class="btn btn-success btn-lg pageModal2" data-target="#myModal2">
+  Launch second modal
+</button>
+</pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2-->
+<div class="modal fade page-modal page-modal-2" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close closePM2" data-close="#myModal2"><i class="fa fa-times"></i><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel"><i class="fa fa-user fa-2x text-success"></i> <span>Second Modal title</span></h4>
+      </div>
+      <div class="modal-body">
+<pre>      
+Discovery[edit]
+"Lorem ipsum" text is derived from sections 1.10.32–3 of Cicero's De finibus bonorum et malorum (On the Ends of Goods and Evils, or alternatively [About] The Purposes of Good and Evil).[2] The original passage began: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci velit (translation: "Neither is there anyone who loves, pursues or desires pain itself because it is pain").
+
+It is not known exactly when the text acquired its current standard form; it may have been as late as the 1960s. Dr. Richard McClintock, a Latin scholar who was the publications director at Hampden-Sydney College in Virginia, discovered the source of the passage sometime before 1982 while searching for instances of the Latin word "consectetur", rarely used in classical literature.[1][a] The physical source of the Lorem Ipsum text may be the 1914 Loeb Classical Library Edition of the De Finibus, where the Latin text finishes page 34 with "Neque porro quisquam est qui do-" and begins page 36 with "lorem ipsum (et seq.)…", suggesting that the galley type of that page was scrambled to make the dummy text seen today.
+</pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 
+ 	The page modals can be called on click event without the use of pageModal class and data-target and data-close
+    
+    eg:
+    
+    $(id/class of selector).click(function(){
+    	// for page modal lvl 1
+    	$('#modal id').page_modal('show');
+        $('#modal id').page_modal('hide');
+        
+        //page modal lvl 2
+        $('#modal id').page_modal2('show');
+        $('#modal id').page_modal2('hide');
+    });
+
+
+-->
