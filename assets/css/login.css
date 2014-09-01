@@ -1,5 +1,12 @@
 @import url("styles.css");
 /* CSS Document */
+
+@font-face {
+    font-family: Euros;
+    src:url(../fonts/Eurostile/Euros.ttf);
+}	
+
+
 html, body{
     height: 100%;
 	color:#fafafa;
@@ -33,11 +40,17 @@ html, body{
 .login-form :-ms-input-placeholder {  
    color: #c7c7c7; 
 }
+.login-form a,
+.login-form label{
+	font-size:18px;
+	font-weight:400;	
+}
 
 .login-form label{
 	color:#fafafa;
-	font-weight:400;	
+	margin-bottom:8px;
 }
+
 .login-form .form-control{
 	border-radius:0;	
 	color:#fafafa;
@@ -46,29 +59,33 @@ html, body{
 	border-color:#2a2a2a;
 	border-width: 1px;
 	padding: 18px 12px;
+	font-size:18px;
+}
+.login-form .btn{
+	font-size:18px;	
+}
+.login-form .form-group{
+	margin-bottom:20px;	
+}
+.form-group-gap{
+	margin-bottom:25px !important;	
 }
 
+
 .box{
-	height:50%;
 	float:left;
 	width:100%;	
-	min-height:300px;
 }
-.valign{
-	display: inline-block;
-    height: 100%;
-    vertical-align: middle;	
-}
+
 .logo{
-    max-height: 161px;
-    vertical-align: middle;
+
 }
 h3{
-	font-size: 20px;
+	font-size: 30px;
 	font-weight: 100;
 	color: #fff;
-	margin-top: -40px;
-	margin-bottom: 0;	
+	margin-bottom:25px;	
+	font-family:'Euros', sans-serif;
 }
 
 .login-form{
@@ -80,7 +97,7 @@ h3{
 	min-width:100px;	
 }
 .login-ckbox{
-	margin-top:0;
+	margin-top:3px;
 	margin-bottom:0;
 }
 .login-ckbox label span{
@@ -88,7 +105,14 @@ h3{
 	padding-left:10px;	
 }
 .valign-m{
-	line-height:32px;	
+	line-height:36px;	
+}
+
+/** Tablet */
+@media only screen and (max-width: 990px){
+	.logo{
+		width:90%;	
+	}
 }
 
 

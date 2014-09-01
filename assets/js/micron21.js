@@ -50,7 +50,7 @@
 			len = $this.val().length;
 			if(len > 0){
 				// remove other btn classes
-				$(target).removeClass('btn-info').removeClass('btn-default').removeClass('btn-default-alt').removeClass('btn-warning').removeClass('btn-danger');
+				$(target).removeClass('btn-info').removeClass('btn-default').removeClass('btn-default-alt').removeClass('btn-warning').removeClass('btn-danger').removeClass('btn-success');
 				$(target).addClass(class_name);
 			}else{
 				$(target).removeAttr('class').addClass(cur_classes);
