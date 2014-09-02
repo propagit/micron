@@ -10,7 +10,7 @@
 <link href="assets/fontawesome/css/font-awesome.min.css" rel="stylesheet">
 
 <!-- iCheck CSS-->
-<link href="assets/icheck/skins/square/square.css" rel="stylesheet">
+<link href="assets/iCheck/skins/square/square.css" rel="stylesheet">
 
 <!-- login Styles -->
 <link href="assets/css/login.css" rel="stylesheet">
@@ -18,8 +18,8 @@
 <title>Micron 21</title>
 </head>
 <body>
-    <div class="box primary-bg">
-       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 center">
+    <div class="box primary-bg center">
+    	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 center">
           <img class="logo" src="assets/img/logo.jpg">
           <h3>Domain Management</h3>
        </div>
@@ -27,26 +27,16 @@
     
     <div class="box secondary-bg">
     	<div class="login-form">
-        	<form role="form" method="post" action="auth.html">
-              <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input tabindex="1" type="email" class="form-control" id="exampleInputEmail1" placeholder="morgan.plumley@hubplus.com.au" autocomplete="off">
-              </div>
+        	<form role="form" method="post" action="index.html">
               <div class="form-group form-group-gap">
-                <label for="exampleInputPassword1">Password</label><a class="inline-block pull" href="password-reset.html">Forgotten?</a>
-                <input tabindex="2" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" autocomplete="off">
+                <label for="authCode">Authentication code required</label><a class="inline-block pull" href="javascript:void(0);">Help?</a>
+                <input type="text" class="form-control" id="authCode" placeholder="345278" autocomplete="off">
               </div>
               <div class="valign-m">
-                  <div class="checkbox inline pull login-ckbox">
-                    <label>
-                      <input tabindex="4" type="checkbox"> <span>Stay logged in</span>
-                    </label>
-                  </div>
-                  <button tabindex="3" type="submit" class="btn btn-success">Log In</button>
+                  <button type="submit" class="btn btn-success">Continue</button>
               </div>
             </form>
         </div>
-       
     </div>
 
 

@@ -31,8 +31,9 @@
     <header id="header">
     	<div id="top-group">
             <ul class="nav pull">
+              <li><a href="javascript:void(0);">Account Balance: <span class="text-white">$1456.00</span></a></li>
               <li class="dropdown pull-text">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="index.html">
                   2 items <span class="caret"></span> <i class="fa fa-shopping-cart"></i>
                 </a>
                 <ul class="dropdown-menu">
@@ -41,10 +42,10 @@
                             <div class="col-xs-12 cart-contents">
                                 <table>
                                     <tr>
-                                        <td>exampledomain.com <i class="fa fa-times-circle pull"></i></td>
+                                        <td>exampledomain.com <i class="fa fa-times-circle pull delete-item pointer"></i></td>
                                     </tr>
                                     <tr>
-                                        <td>exampledomain.com <i class="fa fa-times-circle pull"></i></td>
+                                        <td>exampledomain.com <i class="fa fa-times-circle pull delete-item pointer"></i></td>
                                     </tr>
                                     <tr>
                                         <td>Total: <span class="pull">$36.00</span></td>
@@ -61,10 +62,10 @@
               </li>
          
               <li>
-              	<a class="dropdown-toggle" data-toggle="dropdown" href="#">morgan.plumley@hubplus.com.au <i class="fa fa-user"></i></a>
+              	<a class="dropdown-toggle" data-toggle="dropdown" href="index.html">morgan.plumley@hubplus.com.au <i class="fa fa-user"></i></a>
                 <ul class="dropdown-menu">
-                	<li><a href="#">Account details</a></li>
-                    <li><a href="#">Logout</a></li>
+                	<li><a href="index.html">Account details</a></li>
+                    <li><a href="index.html">Logout</a></li>
                 </ul>
               </li>
             </ul>
@@ -74,35 +75,51 @@
     <aside id="left-panel">
     	<nav>
         	<ul class="nav" id="side-nav">
-            	<li class="panel"><a class="active" href="#"><i class="fa fa-th fa-fw"></i><span class="hidden-sm hidden-sm hidden-xs">Dashboard</span></a></li>
+            	<li class="panel"><a class="active" href="index.html"><i class="fa fa-th fa-fw"></i><span class="hidden-sm hidden-sm hidden-xs">Dashboard</span></a></li>
                 <li class="panel">
-                	<a data-toggle="collapse" data-parent="#side-nav" href="#domain"><i class="fa fa-chain fa-fw"></i><span class="hidden-sm hidden-xs">Domains (16)</span></a>
+                	<a data-toggle="collapse" data-parent="#side-nav" href="#domain">
+                    	<i class="fa fa-chain fa-fw"></i>
+                        <i class="fa fa-exclamation-triangle nav-alert text-warning hidden-lg hidden-md"></i>
+                        <span class="hidden-sm hidden-xs">Domains (16)</span>
+                    </a>
                 	<ul class="panel-collapse collapse" id="domain" role="menu">
-                    	<li><a href="#">Domain names</a></li>
-                    	<li><a href="#">Domain contacts</a></li>
-                        <li><a href="#">Register a domain</a></li>
-                        <li><a href="#">Transfer a domain</a></li>
-                        <li><a href="#">WHOIS lookup</a></li>
+                    	<li><a href="ajax/domains.html">Domain names</a></li>
+                    	<li><a href="index.html">Domain contacts</a></li>
+                        <li><a href="index.html">Register a domain</a></li>
+                        <li><a href="index.html">Transfer a domain</a></li>
+                        <li><a href="index.html">WHOIS lookup</a></li>
                     </ul>
                 </li>
-                <li class="panel"><a href="#"><i class="fa fa-users fa-fw"></i> <span class="hidden-sm hidden-xs">Clients (12)</span></a></li>
+                <li class="panel"><a href="index.html"><i class="fa fa-users fa-fw"></i> <span class="hidden-sm hidden-xs">Clients (12)</span></a></li>
+                <li class="panel nav-hr"></li>
                 <li class="panel">
-                	<a data-toggle="collapse" data-parent="#side-nav" href="#account"><i class="fa fa-user fa-fw"></i><span class="hidden-sm hidden-sm hidden-xs">Account</span></a>
+                	<a data-toggle="collapse" data-parent="#side-nav" href="#account">
+                        <i class="fa fa-user fa-fw"></i>
+                        <i class="fa fa-exclamation-circle nav-alert text-danger hidden-lg hidden-md"></i>
+                        <span class="hidden-sm hidden-sm hidden-xs">Account</span>
+                    </a>
                     <ul class="panel-collapse collapse" id="account">
-                    	<li><a href="#">Account details</a></li>
-                        <li><a href="#">Billing Information</a></li>
-                    	<li><a href="#">Invoices</a></li>
+                    	<li><a href="index.html">Account details</a></li>
+                        <li><a href="index.html">Billing Information</a></li>
+                    	<li><a href="index.html">Invoices</a></li>
                     </ul>
                 </li>
                 <li class="panel">
-                	<a data-toggle="collapse" data-parent="#side-nav" href="#support"><i class="fa fa-user-md fa-fw"></i><span class="hidden-sm hidden-sm hidden-xs">Support (1)</span></a>
+                	<a data-toggle="collapse" data-parent="#side-nav" href="#support">
+                        <i class="fa fa-user-md fa-fw"></i>
+                        <i class="fa fa-info-circle nav-alert text-info hidden-lg hidden-md"></i>
+                        <span class="hidden-sm hidden-sm hidden-xs">Support (1)</span>
+                    </a>
                     <ul class="panel-collapse collapse" id="support">
-                    	<li><a href="#">Knowledge base</a></li>
-                        <li><a href="#">Submit a new ticket</a></li>
-                    	<li><a href="#">Open support tickets</a></li>
-                        <li><a href="#">Closed support tickets</a></li>
+                    	<li><a href="index.html">Knowledge base</a></li>
+                        <li><a href="index.html">Submit a new ticket</a></li>
+                    	<li><a href="index.html">Open support tickets</a></li>
+                        <li><a href="index.html">Closed support tickets</a></li>
                     </ul>
                 </li>
+                <li class="panel nav-hr">&nbsp;</li>
+                <li class="panel"><a href="index.html"><i class="fa fa-cogs fa-fw"></i> <span class="hidden-sm hidden-xs">Admin</span></a></li>
+                <li class="panel nav-hr"></li>
                 <li class="panel">
                 	<a data-toggle="collapse" data-parent="#side-nav" href="#ui-elements"><i class="fa fa-desktop fa-fw"></i><span class="hidden-sm hidden-sm hidden-xs">UI Elements</span></a>
                     <ul class="panel-collapse collapse" id="ui-elements">
@@ -141,6 +158,12 @@ $(function(){
 		$('#content').load(hash.substring(1));
 	}
 	
+	// delete cart item
+	$('.delete-item').click(function(e){
+		// prevent dropdown from closing
+		e.stopPropagation()
+		$(this).parent().parent().remove();
+	});
 });
 
 function load_content(obj){

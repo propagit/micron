@@ -1,10 +1,6 @@
 @import url("styles.css");
 /* CSS Document */
-
-@font-face {
-    font-family: Euros;
-    src:url(../fonts/Eurostile/Euros.ttf);
-}	
+	
 
 
 html, body{

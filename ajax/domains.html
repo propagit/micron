@@ -1,0 +1,489 @@
+<h3 class="page-header">Domains</h3>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active"><a href="#names">Domain names</a></li>
+    <li><a href="#contacts">Domain contacts</a></li>
+    <li><a href="#register">Register a domain</a></li>
+    <li><a href="#transfer">Transfer a domain</a></li>
+    <li><a href="#whois">WHOIS lookup</a></li>
+</ul>
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="names">
+                <div id="status-options" class="hide">
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" /> Registered
+            </label>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" /> Expiring
+            </label>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" /> On hold
+            </label>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" /> Pending
+            </label>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" /> Expired
+            </label>
+        </div>
+        </div>
+        <div id="renew-options" class="hide">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" /> Enabled
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" /> Disabled
+                </label>
+            </div>
+        </div>
+        <div id="lock-options" class="hide">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" /> Enabled
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" /> Disabled
+                </label>
+            </div>
+        </div>
+        
+        <!-- Single button -->
+        <div id="menu-actions" class="hide">
+            <div class="btn-group dropup btn-group-action">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    Actions <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#"><i class="fa fa-sitemap"></i> Update name servers</a></li>
+                    <li><a href="#"><i class="fa fa-envelope-o"></i> Update domain contacts</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#"><i class="fa fa-group"></i> Assign to client</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#"><i class="fa fa-refresh"></i> Enable auto renew</a></li>
+                    <li><a href="#"><i class="fa fa-rotate-right"></i> Disable auto renew</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#"><i class="fa fa-lock"></i> Enable domain lock</a></li>
+                    <li><a href="#"><i class="fa fa-unlock"></i> Disable domain lock</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="table-responsive">
+            <table class="table" id="example">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" /></th>
+                        <th>Domain <i class="fa fa-sort"></i></th>
+                        <th><span class="link" id="menu-status" data-toggle="popover">Domain Status <i class="fa fa-caret-down"></i></span></th>
+                        <th>Renewal date <i class="fa fa-sort"></i></th>
+                        <th>Client <i class="fa fa-sort"></i></th>
+                        <th><span class="link" id="menu-renew" data-toggle="popover">Auto renew <i class="fa fa-caret-down"></i></span></th>
+                        <th><span class="link" id="menu-lock" data-toggle="popover">Domain lock <i class="fa fa-caret-down"></i></span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td><a href="javascript:void(0);" class="pageModal" data-target="#myModal">exampledomain.com.au</a></td>
+                        <td><i class="fa fa-circle text-success"></i> Registered</td>
+                        <td>22/03/15</td>
+                        <td>John Citizen</td>
+                        <td><i class="fa fa-refresh text-success"></i> Enabled</td>
+                        <td><i class="fa fa-lock text-success"></i> Enabled</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>longexampledomain.com.au</td>
+                        <td><i class="fa fa-circle text-success"></i> Registered</td>
+                        <td>18/02/15</td>
+                        <td>John Citizen</td>
+                        <td><i class="fa fa-refresh text-success"></i> Enabled</td>
+                        <td><i class="fa fa-lock text-success"></i> Enabled</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>longerexampledomain.com.au</td>
+                        <td><i class="fa fa-circle text-success"></i> Registered</td>
+                        <td>04/11/14</td>
+                        <td>Sally Sample</td>
+                        <td><i class="fa fa-refresh text-success"></i> Enabled</td>
+                        <td><i class="fa fa-lock text-success"></i> Enabled</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>longestexampledomain.com.au</td>
+                        <td><i class="fa fa-circle text-warning"></i> Expiring</td>
+                        <td>13/06/14</td>
+                        <td>Jane Doe</td>
+                        <td><i class="fa fa-rotate-right text-muted"></i> Disabled</td>
+                        <td><i class="fa fa-lock text-success"></i> Enabled</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>exampledomain.com.au</td>
+                        <td><i class="fa fa-circle text-warning"></i> Expiring</td>
+                        <td>05/06/14</td>
+                        <td>Sally Sample</td>
+                        <td><i class="fa fa-rotate-right text-muted"></i> Disabled</td>
+                        <td><i class="fa fa-unlock text-muted"></i> Disabled</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>longexampledomain.com.au</td>
+                        <td><i class="fa fa-circle text-warning-alt"></i> On hold</td>
+                        <td>30/05/14</td>
+                        <td>John Citizen</td>
+                        <td><i class="fa fa-rotate-right text-muted"></i> Disabled</td>
+                        <td><i class="fa fa-unlock text-muted"></i> Disabled</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>longerexampledomain.com.au</td>
+                        <td><i class="fa fa-circle text-warning-alt"></i> On hold</td>
+                        <td>28/05/14</td>
+                        <td>John Citizen</td>
+                        <td><i class="fa fa-rotate-right text-muted"></i> Disabled</td>
+                        <td><i class="fa fa-unlock text-muted"></i> Disabled</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>longestexampledomain.com.au</td>
+                        <td><i class="fa fa-circle text-info"></i> Pending</td>
+                        <td>20/05/15</td>
+                        <td>John Citizen</td>
+                        <td><i class="fa fa-rotate-right text-muted"></i> Disabled</td>
+                        <td><i class="fa fa-unlock text-muted"></i> Disabled</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>exampledomain.com.au</td>
+                        <td><i class="fa fa-circle text-danger"></i> Expired</td>
+                        <td>14/11/13</td>
+                        <td>Sally Sample</td>
+                        <td><i class="fa fa-rotate-right text-muted"></i> Disabled</td>
+                        <td><i class="fa fa-unlock text-muted"></i> Disabled</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>longexampledomain.com.au</td>
+                        <td><i class="fa fa-circle text-danger"></i> Expired</td>
+                        <td>06/08/13</td>
+                        <td>Jane Doe</td>
+                        <td><i class="fa fa-rotate-right text-muted"></i> Disabled</td>
+                        <td><i class="fa fa-unlock text-muted"></i> Disabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>longerexampledomain.com.au</td>
+                        <td><i class="fa fa-circle text-success"></i> Registered</td>
+                        <td>04/11/14</td>
+                        <td>Sally Sample</td>
+                        <td><i class="fa fa-refresh text-success"></i> Enabled</td>
+                        <td><i class="fa fa-lock text-success"></i> Enabled</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>longestexampledomain.com.au</td>
+                        <td><i class="fa fa-circle text-warning"></i> Expiring</td>
+                        <td>13/06/14</td>
+                        <td>Jane Doe</td>
+                        <td><i class="fa fa-rotate-right text-muted"></i> Disabled</td>
+                        <td><i class="fa fa-lock text-success"></i> Enabled</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>exampledomain.com.au</td>
+                        <td><i class="fa fa-circle text-warning"></i> Expiring</td>
+                        <td>05/06/14</td>
+                        <td>Sally Sample</td>
+                        <td><i class="fa fa-rotate-right text-muted"></i> Disabled</td>
+                        <td><i class="fa fa-unlock text-muted"></i> Disabled</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>longexampledomain.com.au</td>
+                        <td><i class="fa fa-circle text-warning-alt"></i> On hold</td>
+                        <td>30/05/14</td>
+                        <td>John Citizen</td>
+                        <td><i class="fa fa-rotate-right text-muted"></i> Disabled</td>
+                        <td><i class="fa fa-unlock text-muted"></i> Disabled</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>longerexampledomain.com.au</td>
+                        <td><i class="fa fa-circle text-warning-alt"></i> On hold</td>
+                        <td>28/05/14</td>
+                        <td>John Citizen</td>
+                        <td><i class="fa fa-rotate-right text-muted"></i> Disabled</td>
+                        <td><i class="fa fa-unlock text-muted"></i> Disabled</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>longestexampledomain.com.au</td>
+                        <td><i class="fa fa-circle text-info"></i> Pending</td>
+                        <td>20/05/15</td>
+                        <td>John Citizen</td>
+                        <td><i class="fa fa-rotate-right text-muted"></i> Disabled</td>
+                        <td><i class="fa fa-unlock text-muted"></i> Disabled</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>exampledomain.com.au</td>
+                        <td><i class="fa fa-circle text-danger"></i> Expired</td>
+                        <td>14/11/13</td>
+                        <td>Sally Sample</td>
+                        <td><i class="fa fa-rotate-right text-muted"></i> Disabled</td>
+                        <td><i class="fa fa-unlock text-muted"></i> Disabled</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>longexampledomain.com.au</td>
+                        <td><i class="fa fa-circle text-danger"></i> Expired</td>
+                        <td>06/08/13</td>
+                        <td>Jane Doe</td>
+                        <td><i class="fa fa-rotate-right text-muted"></i> Disabled</td>
+                        <td><i class="fa fa-unlock text-muted"></i> Disabled</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>longerexampledomain.com.au</td>
+                        <td><i class="fa fa-circle text-success"></i> Registered</td>
+                        <td>04/11/14</td>
+                        <td>Sally Sample</td>
+                        <td><i class="fa fa-refresh text-success"></i> Enabled</td>
+                        <td><i class="fa fa-lock text-success"></i> Enabled</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>longestexampledomain.com.au</td>
+                        <td><i class="fa fa-circle text-warning"></i> Expiring</td>
+                        <td>13/06/14</td>
+                        <td>Jane Doe</td>
+                        <td><i class="fa fa-rotate-right text-muted"></i> Disabled</td>
+                        <td><i class="fa fa-lock text-success"></i> Enabled</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>exampledomain.com.au</td>
+                        <td><i class="fa fa-circle text-warning"></i> Expiring</td>
+                        <td>05/06/14</td>
+                        <td>Sally Sample</td>
+                        <td><i class="fa fa-rotate-right text-muted"></i> Disabled</td>
+                        <td><i class="fa fa-unlock text-muted"></i> Disabled</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>longexampledomain.com.au</td>
+                        <td><i class="fa fa-circle text-warning-alt"></i> On hold</td>
+                        <td>30/05/14</td>
+                        <td>John Citizen</td>
+                        <td><i class="fa fa-rotate-right text-muted"></i> Disabled</td>
+                        <td><i class="fa fa-unlock text-muted"></i> Disabled</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>longerexampledomain.com.au</td>
+                        <td><i class="fa fa-circle text-warning-alt"></i> On hold</td>
+                        <td>28/05/14</td>
+                        <td>John Citizen</td>
+                        <td><i class="fa fa-rotate-right text-muted"></i> Disabled</td>
+                        <td><i class="fa fa-unlock text-muted"></i> Disabled</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>longestexampledomain.com.au</td>
+                        <td><i class="fa fa-circle text-info"></i> Pending</td>
+                        <td>20/05/15</td>
+                        <td>John Citizen</td>
+                        <td><i class="fa fa-rotate-right text-muted"></i> Disabled</td>
+                        <td><i class="fa fa-unlock text-muted"></i> Disabled</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>exampledomain.com.au</td>
+                        <td><i class="fa fa-circle text-danger"></i> Expired</td>
+                        <td>14/11/13</td>
+                        <td>Sally Sample</td>
+                        <td><i class="fa fa-rotate-right text-muted"></i> Disabled</td>
+                        <td><i class="fa fa-unlock text-muted"></i> Disabled</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>longexampledomain.com.au</td>
+                        <td><i class="fa fa-circle text-danger"></i> Expired</td>
+                        <td>06/08/13</td>
+                        <td>Jane Doe</td>
+                        <td><i class="fa fa-rotate-right text-muted"></i> Disabled</td>
+                        <td><i class="fa fa-unlock text-muted"></i> Disabled</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-3">
+                
+            </div>
+            <div class="col-md-6 col-center hide">
+                <ul class="pagination">
+                    <li><a href="#">&laquo;</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 hide">
+                <div class="btn-group dropup btn-group-action btn-group-autowidth pull-right">
+                    <label class="pull-left">View</label>
+                    <button type="button" class="btn btn-default">60 Rows</button>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">90 Rows</a></li>
+                    <li><a href="#">60 Rows</a></li>
+                    <li><a href="#">30 Rows</a></li>
+                    <li><a href="#">10 Rows</a></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="tab-pane" id="contacts">
+        <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+    </div>
+    <div class="tab-pane" id="register">...</div>
+    <div class="tab-pane" id="transfer">
+        <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+    </div>
+    <div class="tab-pane" id="whois">
+        <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
+    </div>
+</div>
+
+
+<!-- Modal 1 -->
+<div class="modal fade page-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <span class="pm-lt-caret"><i class="fa fa-caret-left"></i></span>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close closePM" data-close="#myModal"><i class="fa fa-times"></i><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">exampledomain.com.au</h4>
+      </div>
+      <div class="modal-body">
+
+        <button class="btn btn-success btn-lg pageModal2" data-target="#myModal2">
+          Launch second modal
+        </button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2-->
+<div class="modal fade page-modal page-modal-2" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <span class="pm-lt-caret"><i class="fa fa-caret-left"></i></span>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close closePM2" data-close="#myModal2"><i class="fa fa-times"></i><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">exampledomain.com.au</h4>
+      </div>
+      <div class="modal-body">
+			
+      </div>
+    </div>
+  </div>
+</div>
+            
+            
+<!-- Data Tables -->
+<script>
+$(document).ready(function() {
+    $('#example').dataTable({
+        "dom" : '<"top"f<"manify">i>rt<"row"<"col-md-3 actions"><"col-md-6 col-center"p><"col-md-3"l>><"clear">',
+        "lengthMenu": [[10, 30, 60, 90], ["10 Rows", "30 Rows", "60 Rows", "90 Rows"]],
+        "language" : {
+            "paginate": {
+                "next" : "&raquo;",
+                "previous" : "&laquo;"
+            },
+            "lengthMenu" : "View _MENU_ "
+        },
+        "oLanguage": {
+            "sSearch": "",
+            "sLengthMenu": "View _MENU_"
+        },
+        "aoColumnDefs": [
+            { 
+                'bSortable': false, 
+                'aTargets': [ 2, 5, 6 ] 
+            }
+        ]
+    });
+    $('.dataTables_filter input').attr("placeholder", "search...");
+    $('div.manify').html('<i class="pull-right fa fa-search fa-2x text-success"></i>');
+    $("div.actions").html($('#menu-actions').html());
+    $('select').select2();
+    $('#menu-status').popover({
+        html: true,
+        placement: 'bottom',
+        trigger: 'click',
+        title: 'Domain Status <i class="fa fa-caret-down"></i>',
+        template: '<div class="popover popover-options"><div class="popover-inner"><h3 class="popover-title"></h3><div class="popover-content"><p></p></div></div></div>',
+        content: function(){
+            return $('#status-options').html();
+        }
+    });
+    $('#menu-renew').popover({
+        html: true,
+        placement: 'bottom',
+        trigger: 'click',
+        title: 'Auto renew <i class="fa fa-caret-down"></i>',
+        template: '<div class="popover popover-options"><div class="popover-inner"><h3 class="popover-title"></h3><div class="popover-content"><p></p></div></div></div>',
+        content: function(){
+            return $('#renew-options').html();
+        }
+    });
+    $('#menu-lock').popover({
+        html: true,
+        placement: 'bottom',
+        trigger: 'click',
+        title: 'Domain lock <i class="fa fa-caret-down"></i>',
+        template: '<div class="popover popover-options"><div class="popover-inner"><h3 class="popover-title"></h3><div class="popover-content"><p></p></div></div></div>',
+        content: function(){
+            return $('#lock-options').html();
+        }
+    })
+    $('body').on('click', function (e) {
+        $('[data-toggle=popover]').each(function () {
+            // hide any open popovers when the anywhere else in the body is clicked
+            if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                $(this).popover('hide');
+            }
+        });
+    });
+} );
+</script>

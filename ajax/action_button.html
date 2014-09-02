@@ -3,12 +3,25 @@
   <form role="form">
     <div class="form-group">
       <label for="fieldOne">Search</label>
-      <input type="text" class="form-control actionBtn" data-target="#myActionBtn" id="fieldOne" placeholder="Field one">
+      <input type="text" class="form-control actionBtn" data-target="#myActionBtn" data-class="btn-success" id="fieldOne" placeholder="Field one">
     </div>
     <button type="submit" class="btn btn-default-alt" id="myActionBtn">Submit</button>
   </form>
 </div>
 
 <script>
-$('.actionBtn').action_button();
+/**
+	The class name "actionBtn" is a reserve class which tells the plugin to initiate the plugin
+	
+	Alternately Action btn can be manually called without the use of actionBtn, in which case there is no need to define the attributes data-target and data-class, 
+	$(selector).action_button(traget button,class_name*);
+	eg:
+	
+	$('.actionBtn').action_button('#myActionBtn','btn-success');
+	==> .actionBtn can be any class when called manually.
+		#myActionBtn - data-target - if class given it will affect all the buttons with that class
+		btn-success - data-class  [note:  there is no dot "." infront of the class name as in the case of data-target]
+	
+	-- class_name* = name of the class that gets added to the target button - by default btn-success
+*/
 </script>
