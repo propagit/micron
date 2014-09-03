@@ -9,7 +9,8 @@
 <link href="assets/fontawesome/css/font-awesome.min.css" rel="stylesheet">
 <!-- Select2 -->
 <link href="assets/select2/select2.css" rel="stylesheet">
-
+<!-- iCheck CSS-->
+<link href="assets/icheck/skins/square/square.css" rel="stylesheet">
 <!-- System Styles -->
 <link href="assets/css/styles.css" rel="stylesheet">
 <!-- Demo Styles -->
@@ -22,9 +23,22 @@
 <script type="text/javascript" src="assets/datatables/media/js/jquery.dataTables.min.js"></script> 
 <!-- Select2 -->
 <script type="text/javascript" src="assets/select2/select2.min.js"></script> 
+<!-- iCheck JS -->
+<script type="text/javascript" src="assets/icheck/icheck.js"></script> 
 <!-- Micron 21 Custom Plugin -->
 <script type="text/javascript" src="assets/js/micron21.js"></script>
-
+<script type="text/javascript">
+    (function() {
+        var path = '//easy.myfonts.net/v2/js?sid=4277(font-family=Eurostile+Bold)&sid=4280(font-family=Eurostile+Medium)&sid=4276(font-family=Eurostile+Regular)&key=yXByX1vzNA',
+            protocol = ('https:' == document.location.protocol ? 'https:' : 'http:'),
+            trial = document.createElement('script');
+        trial.type = 'text/javascript';
+        trial.async = true;
+        trial.src = protocol + path;
+        var head = document.getElementsByTagName("head")[0];
+        head.appendChild(trial);
+    })();
+</script>
 <title>Micron 21</title>
 </head>
 <body>
@@ -176,6 +190,7 @@ function load_content(obj){
 
 
 </script>
+
 
 
 </html>

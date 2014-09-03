@@ -392,15 +392,228 @@
         <h4 class="modal-title" id="myModalLabel">exampledomain.com.au</h4>
       </div>
       <div class="modal-body">
+        
+        <!-- left column -->
+        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+        
+        	<!-- at a glance-->
+            <div class="table-responsive">
+              <table class="table table-page-modal">
+                    <thead>
+                        <tr>
+                            <th colspan="2">At-a-glance information</th>
+                        </tr>
+                    </thead>
+                    <tbody class="no-border">
+                        <tr>
+                            <td>Creation date</td>
+                            <td>23/03/2005</td>
+                        </tr>
+                        <tr>
+                            <td>Expiry date</td>
+                            <td>23/03/2015</td>
+                        </tr>
+                        <tr>
+                            <td>Status</td>
+                            <td><i class="fa fa-circle text-success-alt"></i> Registered</td>
+                        </tr>
+                        <tr>
+                            <td>Auto renew</td>
+                            <td><i class="fa fa-refresh text-success-alt"></i> Enabled</td>
+                        </tr>
+                        <tr>
+                            <td>Domain lock</td>
+                            <td><i class="fa fa-lock text-success-alt"></i> Enabled</td>
+                        </tr>
+                    </tbody>
+              </table>
+            </div><!-- end at a glance -->
+            
+            
+            
+            <!-- registration info -->
+            <div class="table-responsive">
+              <table class="table table-page-modal">
+                    <thead>
+                        <tr>
+                            <th colspan="2">Registration information</th>
+                        </tr>
+                    </thead>
+                    <tbody class="no-border">
+                        <tr>
+                            <td>Registrant</td>
+                            <td>John Citizen</td>
+                        </tr>
+                        <tr>
+                            <td>Eligibility type</td>
+                            <td>Company</td>
+                        </tr>
+                        <tr>
+                            <td>Eligibility name</td>
+                            <td>Web Solutions</td>
+                        </tr>
+                        <tr>
+                            <td>Eligibility ID</td>
+                            <td>VIC BN B########</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><button type="button" class="btn btn-default-alt">Download Certificate</button></td>
+                        </tr>
+                    </tbody>
+              </table>
+            </div><!-- end registration info -->
+            
+            
+            
+            <!-- domain password --> 
+            <div class="table-responsive">
+            <form>
+              <table class="table table-page-modal">
+                    <thead>
+                        <tr>
+                            <th colspan="2">Domain password</th>
+                        </tr>
+                    </thead>
+                    <tbody class="no-border">
+                        <tr>
+                            <td>Current password</td>
+                            <td>
+                            <span id="current-password" class="text-primary">&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;</span><span id="toggle-password" class="hint pull inline-block">Show password</span></td>
+                        </tr>
+                        <tr>
+                            <td>New password</td>
+                            <td><input type="password" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>New password again</td>
+                            <td><input type="password" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><button type="button" class="btn btn-default-alt">Change password</button></td>
+                        </tr>
+                    </tbody>
+              </table>
+            </form>
+            </div><!-- end domain password -->
+            
+        
+        </div><!--end left column -->
+        
+        <!-- right column -->
+        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+        	
+            <!-- domain delegation -->
+            <div class="table-responsive">
+              <table class="table table-page-modal">
+                    <thead>
+                        <tr>
+                            <th colspan="3">Domain delegation</th>
+                        </tr>
+                    </thead>
+                    <tbody class="no-border">
+                        <tr>
+                            <td>Name server 1</td>
+                            <td class="w-200">ns1.example.net</td>
+                            <td>12.345.678.90</td>
+                        </tr>
+                        <tr>
+                            <td>Name server 2</td>
+                            <td class="w-200">ns2.example.net</td>
+                            <td>12.345.678.90</td>
+                        </tr>
+                        <tr>
+                            <td>Name server 3</td>
+                            <td class="w-200">ns3.example.net</td>
+                            <td>12.345.678.90</td>
+                        </tr>
+                        <tr>
+                            <td>Name server 4</td>
+                            <td class="w-200">ns4.example.net</td>
+                            <td>12.345.678.90</td>
+                        </tr>
+                        <tr>
+                        	<td colspan="3">
+                            	<table class="inner-table">
+                                	<tr>
+                                    	<td><button class="btn btn-default-alt">Manage name servers</button></td>
+                                        <td><button class="btn btn-default-alt pageModal2" data-target="#myModal2">Manage host records</button></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+              </table>
+              
+            </div><!-- end domain delegation -->
+            
+            
+            <!-- domain contacts -->
+            <div class="table-responsive">
+              <table class="table table-page-modal">
+                    <thead>
+                        <tr>
+                            <th colspan="2">Domain contacts</th>
+                        </tr>
+                    </thead>
+                    <tbody class="no-border">
+                        <tr>
+                            <td>Admin contact</td>
+                            <td><span class="text-primary">John Citizen</span> &lt;john1967@hotmail.com&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>Tech contact</td>
+                            <td><span class="text-primary">John Citizen</span> &lt;john1967@hotmail.com&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>Billing contact</td>
+                            <td><span class="text-primary">John Citizen</span> &lt;john1967@hotmail.com&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><button class="btn btn-default-alt">Update contacts</button></td>
+                        </tr>
+                    </tbody>
+              </table>
+              
+            </div><!-- end domain contacts -->
+            
+            
+             <!-- assigned to client -->
+            <div class="table-responsive">
+              <table class="table table-page-modal">
+                    <thead>
+                        <tr>
+                            <th colspan="2">Assigned to client</th>
+                        </tr>
+                    </thead>
+                    <tbody class="no-border">
+                        <tr>
+                            <td>Organisation</td>
+                            <td>Web Solutions</td>
+                        </tr>
+                        <tr>
+                            <td>Contact</td>
+                            <td>John Citizen</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><button class="btn btn-default-alt">Update client</button></td>
+                        </tr>
+                    </tbody>
+              </table>
+              
+            </div><!-- end assigned to client -->
+            
+            
+            
+        </div><!-- end right column -->
 
-        <button class="btn btn-success btn-lg pageModal2" data-target="#myModal2">
-          Launch second modal
-        </button>
-
-      </div>
-    </div>
-  </div>
-</div>
+      </div><!-- modal-body-->
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- page-modal-1 -->
 
 <!-- Modal 2-->
 <div class="modal fade page-modal page-modal-2" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -412,12 +625,158 @@
         <h4 class="modal-title" id="myModalLabel">exampledomain.com.au</h4>
       </div>
       <div class="modal-body">
+      		<div class="col-xs-12">
+                <h3 class="page-modal-head">Host Records</h3>
+                <div class="table-responsive">
+                    <table class="table table-page-modal-2" id="hostRecords">
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox" /></th>
+                                <th>Type <i class="fa fa-sort"></i></th>
+                                <th>Host Name <i class="fa fa-sort"></i></th>
+                                <th>Data <i class="fa fa-sort"></i></th>
+                                <th>&nbsp;</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>CNAME</td>
+                                <td>shop.exampledomain.com.au</td>
+                                <td>exampledomain.shopify.com</td>
+                                <td><i class="fa fa-cog text-muted"></i> Edit</td>
+                                <td><i class="fa fa-times-circle text-muted"></i> Delete</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>MX</td>
+                                <td>mx1.shop.exampledomain.com.au</td>
+                                <td>mail.google.com</td>
+                                <td><i class="fa fa-cog text-muted"></i> Edit</td>
+                                <td><i class="fa fa-times-circle text-muted"></i> Delete</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>A</td>
+                                <td>blog.shop.exampledomain.com.au</td>
+                                <td>223.221.224.8</td>
+                                <td><i class="fa fa-cog text-muted"></i> Edit</td>
+                                <td><i class="fa fa-times-circle text-muted"></i> Delete</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>A</td>
+                                <td>blog.shop.exampledomain.com.au</td>
+                                <td>223.221.224.8</td>
+                                <td><i class="fa fa-cog text-muted"></i> Edit</td>
+                                <td><i class="fa fa-times-circle text-muted"></i> Delete</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>CNAME</td>
+                                <td>shop.exampledomain.com.au</td>
+                                <td>exampledomain.shopify.com</td>
+                                <td><i class="fa fa-cog text-muted"></i> Edit</td>
+                                <td><i class="fa fa-times-circle text-muted"></i> Delete</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>MX</td>
+                                <td>mx1.shop.exampledomain.com.au</td>
+                                <td>mail.google.com</td>
+                                <td><i class="fa fa-cog text-muted"></i> Edit</td>
+                                <td><i class="fa fa-times-circle text-muted"></i> Delete</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>A</td>
+                                <td>blog.shop.exampledomain.com.au</td>
+                                <td>223.221.224.8</td>
+                                <td><i class="fa fa-cog text-muted"></i> Edit</td>
+                                <td><i class="fa fa-times-circle text-muted"></i> Delete</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>CNAME</td>
+                                <td>shop.exampledomain.com.au</td>
+                                <td>exampledomain.shopify.com</td>
+                                <td><i class="fa fa-cog text-muted"></i> Edit</td>
+                                <td><i class="fa fa-times-circle text-muted"></i> Delete</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+    
+                <div class="btn-group dropup btn-group-action">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        Actions <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><i class="fa fa-sitemap"></i> Update name servers</a></li>
+                        <li><a href="#"><i class="fa fa-envelope-o"></i> Update domain contacts</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#"><i class="fa fa-group"></i> Assign to client</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#"><i class="fa fa-refresh"></i> Enable auto renew</a></li>
+                        <li><a href="#"><i class="fa fa-rotate-right"></i> Disable auto renew</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#"><i class="fa fa-lock"></i> Enable domain lock</a></li>
+                        <li><a href="#"><i class="fa fa-unlock"></i> Disable domain lock</a></li>
+                    </ul>
+                </div>
+                &nbsp;&nbsp;
+                <button class="btn btn-success" data-toggle="modal" data-target="#pmActionModal">Add Record</button>
+            
+            </div>
 			
+            
+            
+            
+            
+      </div><!-- modal-body -->
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- page-modal-2 -->
+            
+
+<div class="modal fade page-modal-sml" id="pmActionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header no-border">
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times"></i><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel"><i class="fa fa-sitemap fa-2x text-success"></i> <span>Add a new host record for the domain <br>exampledomain.com.au</span></h4>
+      </div>
+      <div class="modal-body">
+        <form role="form">
+          <div class="form-group">
+            <label class="display-block" for="recordType">Record Type</label>
+            <select id="recordType">
+            	<option>A/AAAA Record</option>
+                <option>CNAME Record</option>
+                <option>MX Record</option>
+            </select>
+          </div>
+          <hr class="row">
+          <div class="form-group col-xs-8 remove-gutters">
+            <label for="hostName">Host Name</label>
+            <input type="text" class="form-control" id="hostName" placeholder="Enter email">
+          </div>
+          <div class="form-group col-xs-8 remove-gutters">
+            <label for="target">Target (IP Address)</label>
+            <input type="text" class="form-control" id="target" placeholder="Password">
+          </div>
+          <div class="clear"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-default-alt">Add Record</button>
       </div>
     </div>
   </div>
 </div>
-            
+
+
             
 <!-- Data Tables -->
 <script>
@@ -485,5 +844,46 @@ $(document).ready(function() {
             }
         });
     });
-} );
+	
+		
+	//iCheck init
+	$('input').iCheck({
+    	checkboxClass: 'icheckbox_square',
+    	radioClass: 'iradio_square'
+  	});
+	
+	//toggle password
+	$('#toggle-password').click(function(){
+		var $this = $(this);
+		if($('#current-password').hasClass('showing')){
+			$('#current-password').html('&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;').removeClass('showing');
+			$this.html('Show password');
+		}else{
+			$('#current-password').html('m1cr0n21').addClass('showing');
+			$this.html('Hide password');
+		}
+	});
+
+	
+	/**
+		Page Modal Data Tables
+	
+	*/
+	$('#hostRecords').dataTable({
+		"paging":   false, // disable paging
+		"info": 		false, // disable info - showing 8 records per page etc
+		"bFilter":  false, // disable search bar
+        "aoColumnDefs": [
+            { 
+                'aTargets': [ 2, 3, 4 ] // init sort target coloumns 2 3 and 4
+            }
+        ]
+    });
+
+
+        
+	
+});
+
+
 </script>

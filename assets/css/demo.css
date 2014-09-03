@@ -71,3 +71,7 @@ section{
 .demo-wrap .modal .modal-dialog{
 	margin:30px 40px 50px 20px!important;
 }
+/* Eurostyle free trail font div */
+#mfPreviewBar{
+	display:none !important;	
+}

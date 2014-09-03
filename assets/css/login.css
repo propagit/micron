@@ -22,19 +22,19 @@ html, body{
 
 /** form elements */
 .login-form ::-webkit-input-placeholder {
-   color: #c7c7c7;
+   color: #c7c7c7 !important;
 }
 
 .login-form :-moz-placeholder { /* Firefox 18- */
-   color: #c7c7c7; 
+   color: #c7c7c7 !important; 
 }
 
 .login-form ::-moz-placeholder {  /* Firefox 19+ */
-   color: #c7c7c7; 
+   color: #c7c7c7 !important; 
 }
 
 .login-form :-ms-input-placeholder {  
-   color: #c7c7c7; 
+   color: #c7c7c7 !important; 
 }
 .login-form a,
 .login-form label{
@@ -43,16 +43,16 @@ html, body{
 }
 
 .login-form label{
-	color:#fafafa;
+	color:#fafafa !important;
 	margin-bottom:8px;
 }
 
 .login-form .form-control{
 	border-radius:0;	
-	color:#fafafa;
-	background-color:#2a2a2a;
+	color:#fafafa !important;
+	background-color:#2a2a2a !important;
 	box-shadow:none;
-	border-color:#2a2a2a;
+	border-color:#2a2a2a !important;
 	border-width: 1px;
 	padding: 18px 12px;
 	font-size:18px;
@@ -81,7 +81,7 @@ h3{
 	font-weight: 100;
 	color: #fff;
 	margin-bottom:25px;	
-	font-family:'Euros', sans-serif;
+	font-family:'Eurostile', sans-serif;
 }
 
 .login-form{
