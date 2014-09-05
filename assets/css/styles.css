@@ -1,7 +1,7 @@
 /* CSS Document */
 
 /** Google font */
-@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
+/*@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);*/
 
 /** 
 	Abbrs
@@ -235,6 +235,23 @@ nav .nav li a > span{
 .top-cart div:last-child{
 	padding-top:15px;
 	padding-bottom:10px;	
+}
+
+.primary-header{
+	border-bottom:3px solid #b7db27 !important
+}
+.primary-header:after{
+	content: "\f0d8";
+	font-family: FontAwesome;
+	display: block;
+	line-height: normal;
+	width: 27px;
+	position: absolute;
+	font-size: 36px;
+	color: #b7db27;
+	line-height: 35px;
+	margin-left: 100px;
+	margin-top: -14px;	
 }
 
 /** table */
@@ -795,6 +812,9 @@ tbody.no-border td{
 .remove-gutters{
 	padding-right:0;
 	padding-left:0;	
+}
+.fw{
+	width:100%;	
 }
 
 

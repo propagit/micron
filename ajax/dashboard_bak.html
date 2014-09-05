@@ -1,0 +1,153 @@
+<style type="text/css">
+
+	.demo-container {
+		position: relative;
+		height: 400px;
+	}
+
+	#placeholder {
+		width: 550px;
+		height:200px;
+	}
+
+	#menu {
+		position: absolute;
+		top: 20px;
+		left: 625px;
+		bottom: 20px;
+		right: 20px;
+		width: 200px;
+	}
+
+	#menu button {
+		display: inline-block;
+		width: 200px;
+		padding: 3px 0 2px 0;
+		margin-bottom: 4px;
+		background: #eee;
+		border: 1px solid #999;
+		border-radius: 2px;
+		font-size: 16px;
+		-o-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+		-ms-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+		-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+		-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+		box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+		cursor: pointer;
+	}
+
+	#description {
+		margin: 15px 10px 20px 10px;
+	}
+
+	#code {
+		display: block;
+		width: 870px;
+		padding: 15px;
+		margin: 10px auto;
+		border: 1px dashed #999;
+		background-color: #f8f8f8;
+		font-size: 16px;
+		line-height: 20px;
+		color: #666;
+	}
+
+	ul {
+		font-size: 10pt;
+	}
+
+	ul li {
+		margin-bottom: 0.5em;
+	}
+
+	ul.options li {
+		list-style: none;
+		margin-bottom: 1em;
+	}
+
+	ul li i {
+		color: #999;
+	}
+
+	</style>
+<h3 class="page-header primary-header">Welcome, John Doe</h3>
+
+
+<h3 id="title"></h3>
+<div id="placeholder" class="demo-placeholder"></div>
+<p id="description"></p>
+<pre><code id="code"></code></pre>
+<button id="example-11">Clickme</button>
+<script>
+$(function(){
+	
+	var colors = [];
+	colors[0] = '#b7db27';
+	colors[1] = '#ffe827';
+	colors[2] = '#3088cd';
+	colors[3] = '#66d74c';
+	colors[4] = '#d2392a';
+	colors[5] = '#1d1d1d';
+	
+	
+	var data = [],
+		series = Math.floor(Math.random() * 6) + 3;
+
+	for (var i = 0; i < series; i++) {
+		data[i] = {
+			label: "Series" + (i + 1),
+			data: Math.floor(Math.random() * 100) + 1,
+			color: colors[i]
+		}
+	}
+	
+	console.log(data);
+	console.log(series);
+	var placeholder = $("#placeholder");
+	
+	
+	$("#example-11").click(function() {
+
+		placeholder.unbind();
+
+		$("#title").text("Donut Hole");
+		$("#description").text("A donut hole can be added.");
+
+		$.plot(placeholder, data, {
+			series: {
+				pie: { 
+					innerRadius:0.8,
+					show: true
+				},
+				grid: {
+					hoverable: true,
+					clickable: true
+				}
+			}
+		});
+
+		setCode([
+			"$.plot('#placeholder', data, {",
+			"    series: {",
+			"        pie: {",
+			"            innerRadius: 0.5,",
+			"            show: true",
+			"        }",
+			"    }",
+			"});"
+		]);
+	});
+
+});
+
+// A custom label formatter used by several of the plots
+
+	function labelFormatter(label, series) {
+		return "<div style='font-size:8pt; text-align:center; padding:2px; color:white;'>" + label + "<br/>" + Math.round(series.percent) + "%</div>";
+	}
+
+function setCode(lines) {
+	$("#code").text(lines.join("\n"));
+}
+
+</script>

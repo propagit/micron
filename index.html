@@ -24,7 +24,11 @@
 <!-- Select2 -->
 <script type="text/javascript" src="assets/select2/select2.min.js"></script> 
 <!-- iCheck JS -->
-<script type="text/javascript" src="assets/icheck/icheck.js"></script> 
+<script type="text/javascript" src="assets/icheck/icheck.js"></script>
+<!-- Flot Charts -->
+<script language="javascript" type="text/javascript" src="assets/flotchart/jquery.flot.js"></script>
+<!-- Pie Charts [Flot Charts Series] -->
+<script language="javascript" type="text/javascript" src="assets/flotchart/jquery.flot.pie.js"></script>
 <!-- Micron 21 Custom Plugin -->
 <script type="text/javascript" src="assets/js/micron21.js"></script>
 <script type="text/javascript">
@@ -47,7 +51,7 @@
             <ul class="nav pull">
               <li><a href="javascript:void(0);">Account Balance: <span class="text-white">$1456.00</span></a></li>
               <li class="dropdown pull-text">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="index.html">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">
                   2 items <span class="caret"></span> <i class="fa fa-shopping-cart"></i>
                 </a>
                 <ul class="dropdown-menu">
@@ -76,10 +80,10 @@
               </li>
          
               <li>
-              	<a class="dropdown-toggle" data-toggle="dropdown" href="index.html">morgan.plumley@hubplus.com.au <i class="fa fa-user"></i></a>
+              	<a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">morgan.plumley@hubplus.com.au <i class="fa fa-user"></i></a>
                 <ul class="dropdown-menu">
-                	<li><a href="index.html">Account details</a></li>
-                    <li><a href="index.html">Logout</a></li>
+                	<li><a href="javascript:void(0);">Account details</a></li>
+                    <li><a href="javascript:void(0);">Logout</a></li>
                 </ul>
               </li>
             </ul>
@@ -89,7 +93,7 @@
     <aside id="left-panel">
     	<nav>
         	<ul class="nav" id="side-nav">
-            	<li class="panel"><a class="active" href="index.html"><i class="fa fa-th fa-fw"></i><span class="hidden-sm hidden-sm hidden-xs">Dashboard</span></a></li>
+            	<li class="panel"><a class="active no-subnav" href="ajax/dashboard.html"><i class="fa fa-th fa-fw"></i><span class="hidden-sm hidden-sm hidden-xs">Dashboard</span></a></li>
                 <li class="panel">
                 	<a data-toggle="collapse" data-parent="#side-nav" href="#domain">
                     	<i class="fa fa-chain fa-fw"></i>
@@ -98,13 +102,13 @@
                     </a>
                 	<ul class="panel-collapse collapse" id="domain" role="menu">
                     	<li><a href="ajax/domains.html">Domain names</a></li>
-                    	<li><a href="index.html">Domain contacts</a></li>
-                        <li><a href="index.html">Register a domain</a></li>
-                        <li><a href="index.html">Transfer a domain</a></li>
-                        <li><a href="index.html">WHOIS lookup</a></li>
+                    	<li><a href="javascript:void(0);">Domain contacts</a></li>
+                        <li><a href="javascript:void(0);">Register a domain</a></li>
+                        <li><a href="javascript:void(0);">Transfer a domain</a></li>
+                        <li><a href="javascript:void(0);">WHOIS lookup</a></li>
                     </ul>
                 </li>
-                <li class="panel"><a href="index.html"><i class="fa fa-users fa-fw"></i> <span class="hidden-sm hidden-xs">Clients (12)</span></a></li>
+                <li class="panel"><a href="javascript:void(0);"><i class="fa fa-users fa-fw"></i> <span class="hidden-sm hidden-xs">Clients (12)</span></a></li>
                 <li class="panel nav-hr"></li>
                 <li class="panel">
                 	<a data-toggle="collapse" data-parent="#side-nav" href="#account">
@@ -113,9 +117,9 @@
                         <span class="hidden-sm hidden-sm hidden-xs">Account</span>
                     </a>
                     <ul class="panel-collapse collapse" id="account">
-                    	<li><a href="index.html">Account details</a></li>
-                        <li><a href="index.html">Billing Information</a></li>
-                    	<li><a href="index.html">Invoices</a></li>
+                    	<li><a href="javascript:void(0);">Account details</a></li>
+                        <li><a href="javascript:void(0);">Billing Information</a></li>
+                    	<li><a href="javascript:void(0);">Invoices</a></li>
                     </ul>
                 </li>
                 <li class="panel">
@@ -125,14 +129,14 @@
                         <span class="hidden-sm hidden-sm hidden-xs">Support (1)</span>
                     </a>
                     <ul class="panel-collapse collapse" id="support">
-                    	<li><a href="index.html">Knowledge base</a></li>
-                        <li><a href="index.html">Submit a new ticket</a></li>
-                    	<li><a href="index.html">Open support tickets</a></li>
-                        <li><a href="index.html">Closed support tickets</a></li>
+                    	<li><a href="javascript:void(0);">Knowledge base</a></li>
+                        <li><a href="javascript:void(0);">Submit a new ticket</a></li>
+                    	<li><a href="javascript:void(0);">Open support tickets</a></li>
+                        <li><a href="javascript:void(0);">Closed support tickets</a></li>
                     </ul>
                 </li>
                 <li class="panel nav-hr">&nbsp;</li>
-                <li class="panel"><a href="index.html"><i class="fa fa-cogs fa-fw"></i> <span class="hidden-sm hidden-xs">Admin</span></a></li>
+                <li class="panel"><a href="javascript:void(0);"><i class="fa fa-cogs fa-fw"></i> <span class="hidden-sm hidden-xs">Admin</span></a></li>
                 <li class="panel nav-hr"></li>
                 <li class="panel">
                 	<a data-toggle="collapse" data-parent="#side-nav" href="#ui-elements"><i class="fa fa-desktop fa-fw"></i><span class="hidden-sm hidden-sm hidden-xs">UI Elements</span></a>
@@ -166,6 +170,12 @@ $(function(){
 		load_content($(this));
 	});
 	
+	// nav with no subnav
+	$('.no-subnav').click(function(e){
+		e.preventDefault();
+		load_content($(this));
+	});
+	
 	// load the current url
 	var hash = window.location.hash;
 	if(hash){
@@ -185,6 +195,8 @@ function load_content(obj){
 	$('#content').load(url);
 	window.location.hash = url;	
 	$('.modal-backdrop-alt').remove();
+	$('nav .panel a').removeClass('active');
+	obj.parent().parent().siblings().addClass('active');
 }
 
 
