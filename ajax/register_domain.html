@@ -1,0 +1,132 @@
+<h3 class="page-header">Domains</h3>
+<ul class="nav nav-tabs" role="tablist">
+    <li><a href="#names">Domain names</a></li>
+    <li><a href="#contacts">Domain contacts</a></li>
+    <li class="active"><a href="#ajax/register_domain.html">Register a domain</a></li>
+    <li><a href="#transfer">Transfer a domain</a></li>
+    <li><a href="#whois">WHOIS lookup</a></li>
+</ul>
+
+<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 no-lt-gutter">
+
+
+
+	 <!-- Domain search -->
+     <h3>Search for a domain name</h3>
+	 <div class="input-group">
+     <span class="input-group-addon text-muted">www.</span>
+      <input type="text" class="form-control has-prepend-input actionBtn" data-target="#myActionBtn" data-class="btn-success">
+      <div class="input-group-btn btn-group-action">
+        <select class="form-control">
+        	<option>.com.au</option>
+            <option>.com</option>
+            <option>.net.au</option>
+            <option>.net</option>
+            <option>.org.au</option>
+            <option>.org</option>
+            <option>.id.au</option>
+            <option>.biz</option>
+            <option>.info</option>
+        </select>
+        <button type="button" class="btn btn-default-alt input-group-actionBtn" id="myActionBtn">Search</button>
+
+      </div><!-- /btn-group -->
+      
+    </div><!-- /input-group -->
+    
+    <!--end domain search -->
+    
+    
+    <!-- search result -->
+    <div class="table-responsive search-results">
+    	<table class="table">
+        	<thead>
+            	<tr>
+                	<th>Domain</th>
+                    <th>Status</th>
+                    <th>Price</th>
+                    <th>Period</th>
+                    <th>Purchase</th>
+            	</tr>
+            </thead>
+            
+            <tbody>
+            	<tr>
+                	<td>exampledomain.com.au</td>
+                	<td><i class="fa fa-circle text-muted"></i> Unavailable</td>
+                    <td>$38.00</td>
+                    <td>2 years</td>
+                    <td><i class="fa fa-shopping-cart text-muted"></i><span class="text-muted">Add to cart</span></td>
+                </tr>
+                <tr>
+                	<td>exampledomain.com</td>
+                	<td><i class="fa fa-circle text-success-alt"></i> Available</td>
+                    <td>$18.00</td>
+                    <td>1 years</td>
+                    <td><i class="fa fa-shopping-cart text-success-alt"></i><span class="text-success-alt">Remove from cart</span></td>
+                </tr>
+                <tr>
+                	<td>exampledomain.net.au</td>
+                	<td><i class="fa fa-circle text-muted"></i> Unavailable</td>
+                    <td>$38.00</td>
+                    <td>2 years</td>
+                    <td><i class="fa fa-shopping-cart text-muted"></i><span class="text-muted">Add to cart</span></td>
+                </tr>
+                <tr>
+                	<td>exampledomain.net</td>
+                	<td><i class="fa fa-circle text-success-alt"></i> Available</td>
+                    <td>$38.00</td>
+                    <td>2 years</td>
+                    <td><i class="fa fa-shopping-cart text-success-alt"></i><span class="text-success-alt">Remove to cart</span></td>
+                </tr>
+                <tr>
+                	<td>exampledomain.org.au</td>
+                	<td><i class="fa fa-circle text-success-alt"></i> Available</td>
+                    <td>$38.00</td>
+                    <td>2 years</td>
+                    <td><i class="fa fa-shopping-cart text-muted"></i><span class="text-muted">Add to cart</span></td>
+                </tr>
+                <tr>
+                	<td>exampledomain.org</td>
+                	<td><i class="fa fa-circle text-success-alt"></i> Available</td>
+                    <td>$38.00</td>
+                    <td>2 years</td>
+                    <td><i class="fa fa-shopping-cart text-muted"></i><span class="text-muted">Add to cart</span></td>
+                </tr>
+                <tr>
+                	<td>exampledomain.id.au</td>
+                	<td><i class="fa fa-circle text-success-alt"></i> Available</td>
+                    <td>$38.00</td>
+                    <td>1 years</td>
+                    <td><i class="fa fa-shopping-cart text-muted"></i><span class="text-muted">Add to cart</span></td>
+                </tr>
+                <tr>
+                	<td>exampledomain.biz</td>
+                	<td><i class="fa fa-circle text-success-alt"></i> Available</td>
+                    <td>$18.00</td>
+                    <td>2 years</td>
+                    <td><i class="fa fa-shopping-cart text-muted"></i><span class="text-muted">Add to cart</span></td>
+                </tr>
+                <tr>
+                	<td>exampledomain.info</td>
+                	<td><i class="fa fa-circle text-success-alt"></i> Available</td>
+                    <td>$38.00</td>
+                    <td>1 years</td>
+                    <td><i class="fa fa-shopping-cart text-muted"></i><span class="text-muted">Add to cart</span></td>
+                </tr>
+            
+    		</tbody>
+    	</table>
+    </div>
+    
+    <!-- end search result -->
+    
+    
+    
+
+</div>
+
+</div>
+<script>
+$('select').select2();
+</script>
