@@ -704,8 +704,8 @@ tbody.no-border td{
 .nav-alert{
 	font-size: 15px !important;
 	margin-top: -45px;
-	position: absolute;
-	margin-left: 35px;	
+	margin-left: 35px;
+	float:left;
 }
 
 
@@ -732,25 +732,33 @@ tbody.no-border td{
 .icon-download{
   	display: block;
   	background:url(../svg/icon-download.svg);
-  	background-size: 100% 100%;
+  	background-size: auto 100%;
+	background-repeat:no-repeat;
+	background-position:center center;
 	height: 80px;
 }
 .icon-upload{
 	display: block;
   	background:url(../svg/icon-upload.svg);
-  	background-size: 100% 100%;
+  	background-size: auto 100%;
+	background-repeat:no-repeat;
+	background-position:center center;
 	height: 80px;	
 }
 .icon-envelope{
 	display: block;
   	background:url(../svg/icon-envelope.svg);
-  	background-size: 100% 100%;
-	height: 80px;	
+  	background-size: auto 100%;
+	background-repeat:no-repeat;
+	background-position:center center;
+	height: 80px;
 }
 .icon-user-md{
 	display: block;
   	background:url(../svg/icon-user-md.svg);
-  	background-size: 100% 100%;
+  	background-size: auto 100%;
+	background-repeat:no-repeat;
+	background-position:center center;
 	height: 80px;	
 }
 
@@ -789,6 +797,7 @@ tbody.no-border td{
 	.modal-backdrop-alt-2{
 		margin-left:100px;
 	}
+
 }
 
 
