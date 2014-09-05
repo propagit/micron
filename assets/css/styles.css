@@ -12,8 +12,8 @@
 */
 
 @font-face {
-    /*font-family: Euros;
-    src:url(../fonts/Eurostile/eurostile.TTF);*/
+    font-family: Euros;
+    src:url(../fonts/Eurostile/eurostile.TTF);
 }
 html{
 	background:#fff;
@@ -22,7 +22,7 @@ body{
 	height:100%;	
 	background-color:#1a1a1a;
 	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 18px;
+	font-size: 14px;
 }
 
 body,
@@ -784,11 +784,51 @@ tbody.no-border td{
 	font-size:18px;	
 }*/
 /** Dashboard */
+#cover_chart_domains {
+	background: url(../img/bg-grid.png);
+	height: 200px;
+	width: 200px;
+	z-index: 1000;
+	position: absolute;
+	margin-top: -200px;
+	margin-left: 100px;
+}
+#cover_chart_clients {
+	background: url(../img/bg-grid.png);
+	height: 200px;
+	width: 200px;
+	z-index: 1000;
+	position: absolute;
+	margin-top: -200px;
+}
+#cover_box_balance {
+	background: url(../img/bg-grid.png);
+	height: 100px;
+	width: 400px;
+	z-index: 1000;
+	position: absolute;
+	margin-top: -100px;
+}
 .box{
 	-webkit-box-shadow: 1px 2px 8px 2px #ccc;
     box-shadow: 1px 2px 8px 2px #ccc;
 	padding:20px;
 	margin-bottom:30px;
+}
+.box-balance {
+	margin: 15px 0;
+	border: 10px solid #ccc;
+	font-family: 'Euros';
+	font-size: 50px;
+	text-align: center;
+}
+.box-balance div {
+	background: #000;
+	color: #B7DB27;
+	margin: 2px;
+}
+.text-balance {
+	margin: 30px 0 20px 0;
 }
 
 .box h4{
@@ -835,7 +875,23 @@ tbody.no-border td{
 	background-position:center center;
 	height: 80px;	
 }
+.icon-users{
+	display: block;
+  	background:url(../svg/icon-users.svg);
+  	background-size: auto 100%;
+	background-repeat:no-repeat;
+	background-position:center center;
+	height: 80px;	
+}
 
+.icon-chain{
+	display: block;
+  	background:url(../svg/icon-chain.svg);
+  	background-size: auto 100%;
+	background-repeat:no-repeat;
+	background-position:center center;
+	height: 80px;	
+}
 
 /** Tablet */
 @media only screen and (max-width: 992px){

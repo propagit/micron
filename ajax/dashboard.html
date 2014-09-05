@@ -4,30 +4,44 @@
     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 no-lt-gutter">
     	<div class="box">
         	<h4>Domains</h4>
-        
-        
-        </div>
-    
+			<div id="chart_domains"></div>
+			<div id="cover_chart_domains"></div>
+        </div>    
     </div>
     
     
-    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
         <div class="box">
         	<h4>Clients</h4>
-        
-        
-        </div>
-    
+			<div id="chart_clients"></div>
+			<div id="cover_chart_clients"></div>
+        </div>    
     </div>
     
     
-    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
         <div class="box">
         	<h4>Account Balance</h4>
-        
-        
+			<div class="box-balance">
+				<div>$1585.00</div>
+			</div>
+			<div id="cover_box_balance"></div>
+			<div class="row text-balance">
+				<div class="col-md-3">
+					<span class="fa-stack fa-lg pull-right">
+						<i class="fa fa-circle text-success fa-stack-2x"></i>
+						<i class="fa fa-check fa-stack-1x fa-inverse"></i>
+					</span>
+				</div>
+				<div class="col-md-8 no-lt-gutter">
+					You are above your minimum balance.<br />All domains will automatically renew.
+				</div>
+			</div>
         </div>
     </div>
+    
+    <div class="clear"></div>
+    
     
     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 no-lt-gutter">
     	<div class="box">
@@ -36,6 +50,7 @@
             <button class="btn btn-default-alt fw">Register now</button>
         </div>
     </div>
+    
     
     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
     	<div class="box">
@@ -61,3 +76,168 @@
         </div>
     </div>
 </div>
+<script>
+$(function () {
+	// Chart for domains
+	$('#chart_domains').highcharts({
+        chart: {
+        	animation: false,
+            plotBackgroundColor: null,
+            plotBorderWidth: 0,
+            plotShadow: false,
+        	height: 200,
+			margin: [0, 0, 0, 0]
+        },
+        colors: ['#B7DB27', '#FFE827', '#FDAD50', '#D2392A', '#3088CD'],
+        title: null,
+        tooltip: {
+            pointFormat: '<b>{point.y}</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: false
+                },
+                showInLegend: true,
+                startAngle: 0,
+                endAngle: 360,
+                center: ['70%', '50%']
+            }
+        },
+        legend: {
+	        align: 'left',
+	        verticalAlign: 'top',
+	        itemMarginBottom: 10,
+	        itemStyle: { "font-family" : "'Source Sans Pro', sans-serif", "font-weight" : "normal", "font-size" : "14px"},
+	        layout: 'vertical',
+	        margin: 0,
+	        padding: 0,
+	        navigation: {
+		        style: {  }
+	        }
+        },
+        series: [{
+            type: 'pie',
+            name: '',
+            innerSize: '90%',
+            data: [
+                ['Registered',   45],
+                ['Expiring',       26],
+                ['On hold', 12],
+                ['Expired',    8],
+                ['Pending',     6]
+            ]
+        }],
+        credits: {
+	    	enabled: false  
+	    }
+    },
+    
+	function(chart) { // on complete
+	
+		var xpos = '67%';
+		var ypos = '50%';
+		var circleradius = 72;
+		var total = 0;
+		for(var i=0; i < chart.series[0].data.length; i++)
+		{
+			total += chart.series[0].data[i].y;
+		}
+    
+		// Render the circle
+		chart.renderer.circle(xpos, ypos, circleradius).attr({
+			fill: '#000',
+		}).add();
+
+		// Render the text 
+		chart.renderer.text('<span id="chart_domains_total">' + total + '</span>', 165, 100).css({
+			color: '#B7DB27',
+			fontSize: '50px',
+			textAlign: 'center',
+			fontFamily: 'Euros'
+		}).attr({
+			// why doesn't zIndex get the text in front of the chart?
+			zIndex: 999
+		}).add();
+		
+		// Render icon
+		chart.renderer.image('assets/img/icon-chain.png', 178, 120, 30, 30).css({
+			
+		}).attr({
+			
+		}).add();
+		
+	});
+	$('.highcharts-legend-item').click(function(){
+		var $e = $(this).find('text');
+		var color = $e.css('color');
+		if (color == 'rgb(204, 204, 204)') {
+			//$('#chart_domains_total').html($('#chart_domains_total').html() - );
+		}
+	})
+    // Chart for clients
+    var chart_clients = new Highcharts.Chart({
+		chart: {
+			renderTo: 'chart_clients',
+			type: 'pie',
+			height: 200,
+			width: 200,
+			margin: [0, 0, 0, 0]
+		},
+		colors: ['#B7DB27'],
+		title: null,
+		plotOptions: {
+			pie: {
+				innerSize: '90%',
+				center: ['50%', '50%'],
+				dataLabels: {
+					enabled: false
+				}
+			}
+		},
+		tooltip: {
+			enabled: false  
+		},
+		series: [{
+			data: [
+				['Client', 44],
+			]
+		}],
+		credits: {
+			enabled: false  
+		}
+	},
+    
+	function(chart) { // on complete
+	
+		var xpos = '50%';
+		var ypos = '50%';
+		var circleradius = 72;
+    
+		// Render the circle
+		chart.renderer.circle(xpos, ypos, circleradius).attr({
+			fill: '#000',
+		}).add();
+
+		// Render the text 
+		chart.renderer.text('12', 67, 100).css({
+			color: '#B7DB27',
+			fontSize: '50px',
+			textAlign: 'center',
+			fontFamily: 'Euros'
+		}).attr({
+			// why doesn't zIndex get the text in front of the chart?
+			zIndex: 999
+		}).add();
+		
+		// Render icon
+		chart.renderer.image('assets/img/icon-users.png', 85, 120, 30, 30).css({
+			
+		}).attr({
+			
+		}).add();
+	});
+});
+</script>
