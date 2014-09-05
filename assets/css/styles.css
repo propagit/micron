@@ -238,7 +238,8 @@ nav .nav li a > span{
 }
 
 .primary-header{
-	border-bottom:3px solid #b7db27 !important
+	border-bottom:3px solid #b7db27 !important;
+	margin-bottom:30px !important;
 }
 .primary-header:after{
 	content: "\f0d8";
@@ -708,6 +709,52 @@ tbody.no-border td{
 }
 
 
+/** Dashboard */
+.box{
+	-webkit-box-shadow: 1px 2px 8px 2px #ccc;
+    box-shadow: 1px 2px 8px 2px #ccc;
+	padding:20px;
+	margin-bottom:30px;
+}
+
+.box h4{
+	font-family:'Eurostile', sans-serif;
+	padding-top:0;
+	padding-bottom:10px;
+	margin:0;
+	font-size: 23px;
+}
+
+.box .icon-svg{
+	margin-bottom:10px;	
+}
+
+.icon-download{
+  	display: block;
+  	background:url(../svg/icon-download.svg);
+  	background-size: 100% 100%;
+	height: 80px;
+}
+.icon-upload{
+	display: block;
+  	background:url(../svg/icon-upload.svg);
+  	background-size: 100% 100%;
+	height: 80px;	
+}
+.icon-envelope{
+	display: block;
+  	background:url(../svg/icon-envelope.svg);
+  	background-size: 100% 100%;
+	height: 80px;	
+}
+.icon-user-md{
+	display: block;
+  	background:url(../svg/icon-user-md.svg);
+  	background-size: 100% 100%;
+	height: 80px;	
+}
+
+
 /** Tablet */
 @media only screen and (max-width: 992px){
 	aside{
@@ -812,6 +859,12 @@ tbody.no-border td{
 .remove-gutters{
 	padding-right:0;
 	padding-left:0;	
+}
+.no-lt-gutter{
+	padding-left:0;	
+}
+.no-rt-guttter{
+	padding-right:0;	
 }
 .fw{
 	width:100%;	
