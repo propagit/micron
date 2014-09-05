@@ -2,7 +2,7 @@
 <ul class="nav nav-tabs" role="tablist">
     <li class="active"><a href="#names">Domain names</a></li>
     <li><a href="#contacts">Domain contacts</a></li>
-    <li><a href="#register">Register a domain</a></li>
+    <li><a href="#ajax/register_domain.html">Register a domain</a></li>
     <li><a href="#transfer">Transfer a domain</a></li>
     <li><a href="#whois">WHOIS lookup</a></li>
 </ul>
@@ -17,8 +17,8 @@
                     Actions <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" role="menu">
-                    <li><a href="#"><i class="fa fa-sitemap"></i> Update name servers</a></li>
-                    <li><a href="#"><i class="fa fa-envelope-o"></i> Update domain contacts</a></li>
+                    <li><a href="javascript:void(0);" data-toggle="modal" data-target="#updateNameServers"><i class="fa fa-sitemap"></i> Update name servers</a></li>
+                    <li><a href="javascript:void(0);" data-toggle="modal" data-target="#updateDomainContacts"><i class="fa fa-envelope-o"></i> Update domain contacts</a></li>
                     <li class="divider"></li>
                     <li><a href="#"><i class="fa fa-group"></i> Assign to client</a></li>
                     <li class="divider"></li>
@@ -697,7 +697,6 @@
         <h4 class="modal-title" id="myModalLabel"><i class="fa fa-sitemap fa-2x text-success"></i> <span>Add a new host record for the domain <br>exampledomain.com.au</span></h4>
       </div>
       <div class="modal-body">
-        <form role="form">
           <div class="form-group">
             <label class="display-block" for="recordType">Record Type</label>
             <select id="recordType">
@@ -724,6 +723,166 @@
     </div>
   </div>
 </div>
+
+
+<div class="modal fade" id="updateDomainContacts" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg has-datatable">
+    <div class="modal-content">
+      <div class="modal-header no-border">
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times"></i><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel"><i class="fa fa-users fa-2x text-success"></i> <span>Update the domain contacts</span></h4>
+      </div>
+      <div class="modal-body">
+          <div class="table-responsive">
+          	  <span class="data-table-info text-muted">These changes will effect (16) domains.</span>
+                  <div class="body-scroll">
+                      <table class="table" id="domainContacts">
+                          <thead>
+                              <tr>
+                                  <th>Contact</th>
+                                  <th>Organisation</th>
+                                  <th>Admin</th>
+                                  <th>Tech</th>
+                                  <th>Billing</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>Sam Sample</td>
+                                  <td>Sam's Bricklaying</td>
+                                  <td><i class="fa fa-inbox text-success"></i></td>
+                                  <td><i class="fa fa-cog text-muted"></i></td>
+                                  <td><i class="fa fa-credit-card text-muted"></i></td>
+                              </tr>
+                              <tr>
+                                  <td>John Citizen</td>
+                                  <td>Web Solutions</td>
+                                  <td><i class="fa fa-inbox text-muted"></i></td>
+                                  <td><i class="fa fa-cog text-muted"></i></td>
+                                  <td><i class="fa fa-credit-card text-success"></i></td>
+                              </tr>
+                              <tr>
+                                  <td>Sally Sample</td>
+                                  <td>Sally's Flowers</td>
+                                  <td><i class="fa fa-inbox text-muted"></i></td>
+                                  <td><i class="fa fa-cog text-muted"></i></td>
+                                  <td><i class="fa fa-credit-card text-muted"></i></td>
+                              </tr>
+                               <tr>
+                                  <td>Jane Doe</td>
+                                  <td>HJ Associates</td>
+                                  <td><i class="fa fa-inbox text-muted"></i></td>
+                                  <td><i class="fa fa-cog text-success"></i></td>
+                                  <td><i class="fa fa-credit-card text-muted"></i></td>
+                              </tr>
+                              <tr>
+                                  <td>Sam Sample</td>
+                                  <td>Sam's Bricklaying</td>
+                                  <td><i class="fa fa-inbox text-muted"></i></td>
+                                  <td><i class="fa fa-cog text-muted"></i></td>
+                                  <td><i class="fa fa-credit-card text-muted"></i></td>
+                              </tr>
+                               <tr>
+                                  <td>Sam Sample</td>
+                                  <td>Sam's Bricklaying</td>
+                                  <td><i class="fa fa-inbox text-success"></i></td>
+                                  <td><i class="fa fa-cog text-muted"></i></td>
+                                  <td><i class="fa fa-credit-card text-muted"></i></td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+          </div>  
+      </div>
+      <div class="modal-footer">
+      	<button type="button" class="btn btn-success push">Add new contact</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-default-alt">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="updateNameServers" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header no-border">
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times"></i><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel"><i class="fa fa-sitemap fa-2x text-success"></i> <span>Update the name servers of the selected domains.</span></h4>
+      </div>
+      <div class="modal-body">
+         	<span class="data-table-info text-muted">These changes will effect (16) domains.</span>
+            <div class="table-responsive">
+                  <div class="body-scroll">
+                      <table class="table v-middle">
+                          <tbody>
+                              <tr>
+                                  <td>Name server 1</td>
+                                  <td><input type="text" class="form-control bg-muted" value="ns1.example.net"></td>
+                                  <td><input type="text" class="form-control bg-muted" value="12.345.678.90"></td>
+                                  <td><i class="fa fa-times-circle text-muted"></i> Delete</td>
+                              </tr>
+                              <tr>
+                                  <td>Name server 2</td>
+                                  <td><input type="text" class="form-control bg-muted" value="ns2.example.net"></td>
+                                  <td><input type="text" class="form-control bg-muted" value="12.345.678.90"></td>
+                                  <td><i class="fa fa-times-circle text-muted"></i> Delete</td>
+                              </tr>
+                              <tr>
+                                  <td>Name server 3</td>
+                                  <td><input type="text" class="form-control bg-muted" value="ns3.example.net"></td>
+                                  <td><input type="text" class="form-control bg-muted" value="12.345.678.90"></td>
+                                  <td><i class="fa fa-times-circle text-muted"></i> Delete</td>
+                              </tr>
+                              <tr>
+                                  <td>Name server 4</td>
+                                  <td><input type="text" class="form-control bg-muted" value="ns4.example.net"></td>
+                                  <td><input type="text" class="form-control bg-muted" value="12.345.678.90"></td>
+                                  <td><i class="fa fa-times-circle text-muted"></i> Delete</td>
+                              </tr>
+                              <tr>
+                                  <td>Name server 5</td>
+                                  <td><input type="text" class="form-control bg-muted" value="ns5.example.net"></td>
+                                  <td><input type="text" class="form-control bg-muted" value="12.345.678.90"></td>
+                                  <td><i class="fa fa-times-circle text-muted"></i> Delete</td>
+                              </tr>
+                              <tr>
+                                  <td>Name server 6</td>
+                                  <td><input type="text" class="form-control bg-muted" value="ns6.example.net"></td>
+                                  <td><input type="text" class="form-control bg-muted" value="12.345.678.90"></td>
+                                  <td><i class="fa fa-times-circle text-muted"></i> Delete</td>
+                              </tr>
+                              <tr>
+                                  <td>Name server 7</td>
+                                  <td><input type="text" class="form-control bg-muted" value="ns7.example.net"></td>
+                                  <td><input type="text" class="form-control bg-muted" value="12.345.678.90"></td>
+                                  <td><i class="fa fa-times-circle text-muted"></i> Delete</td>
+                              </tr>
+                              <tr>
+                                  <td>Name server 8</td>
+                                  <td><input type="text" class="form-control bg-muted" value="ns8.example.net"></td>
+                                  <td><input type="text" class="form-control bg-muted" value="12.345.678.90"></td>
+                                  <td><i class="fa fa-times-circle text-muted"></i> Delete</td>
+                              </tr>
+                              <tr>
+                                  <td>Name server 9</td>
+                                  <td><input type="text" class="form-control bg-muted" value="ns9.example.net"></td>
+                                  <td><input type="text" class="form-control bg-muted" value="12.345.678.90"></td>
+                                  <td><i class="fa fa-times-circle text-muted"></i> Delete</td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+          </div>
+      </div>
+      <div class="modal-footer">
+      	<button type="button" class="btn btn-default push">Add name server</button>
+        <button type="button" class="btn btn-success">Update name servers</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
             
@@ -844,8 +1003,22 @@ $(document).ready(function() {
         ]
     });
 
+	/**
+		Modal Window Domain Contacts databases
+	*/
+	$('#domainContacts').dataTable({
+		"paging": false,
+		"dom" : '<"top"f<"manify">>',
+		"oLanguage": {
+            "sSearch": "",
+            "sLengthMenu": "View _MENU_"
+        },
 
-        
+    });
+	$('.dataTables_filter input').attr("placeholder", "search...");
+	$('div.manify').html('<i class="pull-right fa fa-search fa-2x text-success"></i>');
+    
+  
 	
 });
 

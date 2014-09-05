@@ -49,6 +49,16 @@ aside{
 	clear: both;
 }
 
+/** Typography */
+h3{
+	padding-top: 20px;
+	/* padding-bottom: 5px; */
+	font-weight: 400;
+	font-size: 20px;
+}
+
+
+
 /** Top Header */
 #header{
 	display: block;
@@ -449,6 +459,10 @@ html[dir="rtl"] .select2-container .select2-choice .select2-arrow,
 	color:#1d1d1d;
 	font-size:18px;
 }
+.btn-muted{
+	background-color:#f5f5f5;
+	border-color:#f5f5f5;	
+}
 .btn-default{
 	/** bs default */	
 }
@@ -569,7 +583,9 @@ label{
 	font-size: 40px;
 	font-weight: 300;
 	padding-left:20px;
-	font-family:'Eurostile', sans-serif;
+}
+.modal-title{
+	font-family:'Eurostile', sans-serif;	
 }
 
 .page-modal .modal-dialog{
@@ -658,9 +674,32 @@ label{
 tbody.no-border td{
 	border-top:none !important;	
 }
-
-
-
+.modal .has-datatable .dataTables_wrapper{
+	float:right;
+	display:inline-block;	
+}
+.modal .has-datatable .dataTables_wrapper .top{
+	margin-top:0 !important;
+	
+}
+.body-scroll{
+	height:300px;
+	overflow:auto;
+}
+.modal .has-datatable .body-scroll .dataTables_wrapper .top{
+	position: fixed;
+	margin-top: -64px !important;
+	right: 40px;
+	
+}
+.data-table-info{
+	line-height:42px;
+	display:block;
+	padding-bottom:20px;	
+}
+.v-middle td{
+	vertical-align:middle !important;	
+}
 /** Tab Elements */
 .nav-tabs {
 	border-bottom: 2px solid #B7DB27;
@@ -707,8 +746,43 @@ tbody.no-border td{
 	margin-left: 35px;
 	float:left;
 }
-
-
+.input-group-addon{
+	border-radius:0;
+	border-width:2px;	
+	background-color:#fafafa;
+	padding-right: 0;
+	font-size:18px;	
+	border-right:none;
+	color:#c5c5c5;
+}
+.has-prepend-input{
+	border-left:none;	
+	padding-left:0;
+}
+.input-group-btn{
+	border-width: 2px;
+	border-left: 0;
+	height: 40px;
+	min-width:100px;	
+}
+.input-group-actionBtn{
+	margin-left:20px !important;	
+}
+.search-results{
+	margin-top:50px;	
+}
+/*.input-group-alt .form-control{
+	border-width:1px;
+	height:39px;
+	border:none;
+}
+.input-group-alt .input-group-addon{
+	background-color: #f5f5f5;
+	border-radius: 0;
+	border-color: #f5f5f5;
+	padding-right: 0;
+	font-size:18px;	
+}*/
 /** Dashboard */
 #cover_chart_domains {
 	background: url(../img/bg-grid.png);
@@ -964,6 +1038,9 @@ tbody.no-border td{
 }
 .fw{
 	width:100%;	
+}
+.bg-muted{
+	background-color:#f5f5f5;
 }
 
 
