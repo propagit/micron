@@ -793,13 +793,43 @@ tbody.no-border td{
 	background-position:center center;
 	height: 80px;
 }
+.icon-badge {
+	display: block;
+  	background:url(../svg/icon-badge.svg);
+  	background-size: auto 100%;
+	background-repeat:no-repeat;
+	background-position:center center;
+	height: 80px;
+	position: relative;
+	margin-top: -21px;
+	color: #fff;
+	text-align: center;
+	padding-left: 44px;
+	padding-top: 17px;
+	font-size: 16px;
+}
 .icon-user-md{
 	display: block;
   	background:url(../svg/icon-user-md.svg);
   	background-size: auto 100%;
 	background-repeat:no-repeat;
 	background-position:center center;
-	height: 80px;	
+	height: 80px;
+}
+.icon-message {
+	display: block;
+  	background:url(../svg/icon-message.svg);
+  	background-size: auto 100%;
+	background-repeat:no-repeat;
+	background-position:center center;
+	height: 80px;
+	position: relative;
+	margin-top: -21px;
+	color: #fff;
+	text-align: center;
+	padding-left: 45px;
+	padding-top: 14px;
+	font-size: 16px;
 }
 .icon-users{
 	display: block;
@@ -865,6 +895,7 @@ tbody.no-border td{
 	color:#595959;
 	border-bottom:none;
 	padding-top:10px;
+	padding-bottom: 20px;
 	margin-bottom: 7px;
 }
 .text-muted{

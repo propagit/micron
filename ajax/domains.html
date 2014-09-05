@@ -9,57 +9,6 @@
 
         <div class="tab-content">
             <div class="tab-pane active" id="names">
-                <div id="status-options" class="hide">
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" /> Registered
-            </label>
-        </div>
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" /> Expiring
-            </label>
-        </div>
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" /> On hold
-            </label>
-        </div>
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" /> Pending
-            </label>
-        </div>
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" /> Expired
-            </label>
-        </div>
-        </div>
-        <div id="renew-options" class="hide">
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" /> Enabled
-                </label>
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" /> Disabled
-                </label>
-            </div>
-        </div>
-        <div id="lock-options" class="hide">
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" /> Enabled
-                </label>
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" /> Disabled
-                </label>
-            </div>
-        </div>
         
         <!-- Single button -->
         <div id="menu-actions" class="hide">
@@ -802,6 +751,7 @@ $(document).ready(function() {
             }
         ]
     });
+    
     $('.dataTables_filter input').attr("placeholder", "search...");
     $('div.manify').html('<i class="pull-right fa fa-search fa-2x text-success"></i>');
     $("div.actions").html($('#menu-actions').html());
@@ -813,7 +763,7 @@ $(document).ready(function() {
         title: 'Domain Status <i class="fa fa-caret-down"></i>',
         template: '<div class="popover popover-options"><div class="popover-inner"><h3 class="popover-title"></h3><div class="popover-content"><p></p></div></div></div>',
         content: function(){
-            return $('#status-options').html();
+            return '<div class="checkbox"><label><input type="checkbox" value="Registered" /> Registered</label></div><div class="checkbox"><label><input type="checkbox" value="Expiring" /> Expiring</label></div><div class="checkbox"><label><input type="checkbox" value="On hold" /> On hold</label></div><div class="checkbox"><label><input type="checkbox" value="Pending" /> Pending</label></div><div class="checkbox"><label><input type="checkbox" value="Expired" /> Expired</label></div>';
         }
     });
     $('#menu-renew').popover({
@@ -823,7 +773,7 @@ $(document).ready(function() {
         title: 'Auto renew <i class="fa fa-caret-down"></i>',
         template: '<div class="popover popover-options"><div class="popover-inner"><h3 class="popover-title"></h3><div class="popover-content"><p></p></div></div></div>',
         content: function(){
-            return $('#renew-options').html();
+            return '<div class="checkbox"><label><input type="checkbox" value="Enabled" /> Enabled</label></div><div class="checkbox"><label><input type="checkbox" value="Disabled" /> Disabled</label></div></div>';
         }
     });
     $('#menu-lock').popover({
@@ -833,11 +783,25 @@ $(document).ready(function() {
         title: 'Domain lock <i class="fa fa-caret-down"></i>',
         template: '<div class="popover popover-options"><div class="popover-inner"><h3 class="popover-title"></h3><div class="popover-content"><p></p></div></div></div>',
         content: function(){
-            return $('#lock-options').html();
+            return '<div class="checkbox"><label><input type="checkbox" value="Enabled" /> Enabled</label></div><div class="checkbox"><label><input type="checkbox" value="Disabled" /> Disabled</label></div></div>';
         }
     })
     $('body').on('click', function (e) {
-        $('[data-toggle=popover]').each(function () {
+    	//iCheck init
+		$('input').iCheck({
+	    	checkboxClass: 'icheckbox_square',
+	    	radioClass: 'iradio_square'
+	  	});
+	  	var table = $('#example').DataTable();
+	    $('#example thead th').each(function(i){
+	    	$(this).find('input[type="checkbox"]').on('ifChecked', function(){
+	    		var val = $(this).val();
+	    		table.column( i )
+                    .search( val, true, false )
+                    .draw();
+	    	});
+	    });
+    	$('[data-toggle=popover]').each(function () {
             // hide any open popovers when the anywhere else in the body is clicked
             if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
                 $(this).popover('hide');
@@ -845,7 +809,7 @@ $(document).ready(function() {
         });
     });
 	
-		
+	
 	//iCheck init
 	$('input').iCheck({
     	checkboxClass: 'icheckbox_square',
