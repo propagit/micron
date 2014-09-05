@@ -4,7 +4,8 @@
     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 no-lt-gutter">
     	<div class="box">
         	<h4>Domains</h4>
-			<div id="chart_domains"></div>        
+			<div id="chart_domains"></div>
+			<div id="cover_chart_domains"></div>
         </div>    
     </div>
     
@@ -12,7 +13,8 @@
     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
         <div class="box">
         	<h4>Clients</h4>
-			<div id="chart_clients"></div>        
+			<div id="chart_clients"></div>
+			<div id="cover_chart_clients"></div>
         </div>    
     </div>
     
@@ -23,6 +25,7 @@
 			<div class="box-balance">
 				<div>$1585.00</div>
 			</div>
+			<div id="cover_box_balance"></div>
 			<div class="row text-balance">
 				<div class="col-md-3">
 					<span class="fa-stack fa-lg pull-right">
@@ -78,6 +81,7 @@ $(function () {
 	// Chart for domains
 	$('#chart_domains').highcharts({
         chart: {
+        	animation: false,
             plotBackgroundColor: null,
             plotBorderWidth: 0,
             plotShadow: false,
@@ -148,8 +152,7 @@ $(function () {
 		}).add();
 
 		// Render the text 
-		chart.renderer.text('<span id="chart_domains_total">' + total + '</span>', 165, 110).css({
-			width: circleradius*2,
+		chart.renderer.text('<span id="chart_domains_total">' + total + '</span>', 165, 100).css({
 			color: '#B7DB27',
 			fontSize: '50px',
 			textAlign: 'center',
@@ -158,6 +161,14 @@ $(function () {
 			// why doesn't zIndex get the text in front of the chart?
 			zIndex: 999
 		}).add();
+		
+		// Render icon
+		chart.renderer.image('/micron/assets/img/icon-chain.png', 178, 120, 30, 30).css({
+			
+		}).attr({
+			
+		}).add();
+		
 	});
 	$('.highcharts-legend-item').click(function(){
 		var $e = $(this).find('text');
@@ -211,8 +222,7 @@ $(function () {
 		}).add();
 
 		// Render the text 
-		chart.renderer.text('12', 67, 110).css({
-			width: circleradius*2,
+		chart.renderer.text('12<div class="icon-svg icon-users"></div>', 67, 100).css({
 			color: '#B7DB27',
 			fontSize: '50px',
 			textAlign: 'center',
@@ -220,6 +230,13 @@ $(function () {
 		}).attr({
 			// why doesn't zIndex get the text in front of the chart?
 			zIndex: 999
+		}).add();
+		
+		// Render icon
+		chart.renderer.image('/micron/assets/img/icon-users.png', 85, 120, 30, 30).css({
+			
+		}).attr({
+			
 		}).add();
 	});
 });

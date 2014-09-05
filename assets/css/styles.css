@@ -710,6 +710,31 @@ tbody.no-border td{
 
 
 /** Dashboard */
+#cover_chart_domains {
+	background: url(../img/bg-grid.png);
+	height: 200px;
+	width: 200px;
+	z-index: 1000;
+	position: absolute;
+	margin-top: -200px;
+	margin-left: 100px;
+}
+#cover_chart_clients {
+	background: url(../img/bg-grid.png);
+	height: 200px;
+	width: 200px;
+	z-index: 1000;
+	position: absolute;
+	margin-top: -200px;
+}
+#cover_box_balance {
+	background: url(../img/bg-grid.png);
+	height: 100px;
+	width: 400px;
+	z-index: 1000;
+	position: absolute;
+	margin-top: -100px;
+}
 .box{
 	-webkit-box-shadow: 1px 2px 8px 2px #ccc;
     box-shadow: 1px 2px 8px 2px #ccc;
@@ -776,7 +801,23 @@ tbody.no-border td{
 	background-position:center center;
 	height: 80px;	
 }
+.icon-users{
+	display: block;
+  	background:url(../svg/icon-users.svg);
+  	background-size: auto 100%;
+	background-repeat:no-repeat;
+	background-position:center center;
+	height: 80px;	
+}
 
+.icon-chain{
+	display: block;
+  	background:url(../svg/icon-chain.svg);
+  	background-size: auto 100%;
+	background-repeat:no-repeat;
+	background-position:center center;
+	height: 80px;	
+}
 
 /** Tablet */
 @media only screen and (max-width: 992px){
