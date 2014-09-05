@@ -8,17 +8,6 @@ html, body{
 	color:#fafafa;
 }
 
-/** backgrounds */
-.primary-bg{
-	background-color:#000000;	
-}
-.secondary-bg{
-	background-color:#1a1a1a;	
-}
-.white-bg{
-	background-color:#fff;	
-}
-
 
 /** form elements */
 .login-form ::-webkit-input-placeholder {

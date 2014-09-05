@@ -61,7 +61,7 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li>
-                    	<div class="top-cart">
+                    	<div class="cart">
                             <div class="col-xs-12 cart-contents">
                                 <table>
                                     <tr>
@@ -188,10 +188,16 @@ $(function(){
 	}
 	
 	// delete cart item
-	$('.delete-item').click(function(e){
+	$(document).on('click','.delete-item',function(e){
 		// prevent dropdown from closing
 		e.stopPropagation()
 		$(this).parent().parent().remove();
+	});
+	
+	// load content on link click
+	$(document).on('click','.load-content',function(e){
+		e.preventDefault();
+		load_content_inner_page($(this));
 	});
 });
 
@@ -202,6 +208,13 @@ function load_content(obj){
 	$('.modal-backdrop-alt').remove();
 	$('nav .panel a').removeClass('active');
 	obj.parent().parent().siblings().addClass('active');
+}
+
+function load_content_inner_page(obj){
+	var url = obj.attr('href');
+	$('#content').load(url);
+	window.location.hash = url;	
+	$('.modal-backdrop-alt').remove();
 }
 
 
