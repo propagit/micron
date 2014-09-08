@@ -1,0 +1,119 @@
+<h3 class="page-header">Checkout</h3>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active"><a href="ajax/knowledge_base.html" class="load-content-demo">Knowledge base</a></li>
+    <li><a href="ajax/new_tickets.html" class="load-content-demo">Submit a new ticket</a></li>
+    <li><a href="ajax/open_tickets.html" class="load-content-demo">Open support tickets</a></li>
+    <li><a href="ajax/closed_tickets.html" class="load-content-demo">Closed support tickets</a></li>
+</ul>
+
+<h3>What do you need help with?</h3>
+<form class="form-inline" role="form">
+    <div class="form-group col-xs-6 remove-gutters">
+   	 	<input type="text" class="form-control actionBtn fw" data-target="#mySearchBtn" data-class="btn-success" placeholder="Example: How to change name servers">
+    </div>
+    <div class="form-group col-xs-6 remove-gutters">
+   		 <button type="button" class="btn btn-default-alt" id="mySearchBtn">Search</button>
+    </div>
+</form>
+
+<div id="searchResults" class="col-xs-12 remove-gutters hide">
+	<h3>Getting started guides</h3>
+    
+    <!-- quater width boxes -->
+	<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 no-lt-gutter dbl-rt-gutter">
+    	<div class="box-alt">
+        	<div class="col-xs-12">
+                <h3>GEtting started with the domain control panel</h3>
+                <p>
+                    This guide will explain 
+                    how to find your way 
+                    around the domain control
+                    panel and explain the 
+                    basic features.
+                </p>
+            </div>
+        </div>
+    </div>
+	
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 no-lt-gutter dbl-rt-gutter">
+        <div class="box-alt">
+        	<div class="col-xs-12">
+                <h3>Lorem ipsum dolor sit amet</h3>
+                <p>
+                    Lorem ipsum dolor sit 
+                    ament, consectetur
+                    adipisicing elit, sed do 
+                    eiusmod tempor incididnut
+                    ut albore.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 no-lt-gutter dbl-rt-gutter">
+        <div class="box-alt">
+        	<div class="col-xs-12">
+                <h3>Lorem ipsum dolor sit amet</h3>
+                <p>
+                    Lorem ipsum dolor sit 
+                    ament, consectetur
+                    adipisicing elit, sed do 
+                    eiusmod tempor incididnut
+                    ut albore.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 no-lt-gutter dbl-rt-gutter">
+        <div class="box-alt">
+        	<div class="col-xs-12">
+                <h3>Lorem ipsum dolor sit amet</h3>
+                <p>
+                    Lorem ipsum dolor sit 
+                    ament, consectetur
+                    adipisicing elit, sed do 
+                    eiusmod tempor incididnut
+                    ut albore.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- end quater width boxes -->
+    
+    <!-- full width boxes-->
+    <div class="col-sx-12 no-lt-gutter dbl-rt-gutter">
+        <div class="box-alt">
+        	<div class="col-xs-12">
+                <h3>Getting started with the dmoain control panel</h3>
+                <p>
+                    May 6, 2014... This guide will explain how to find your way around the control panel and expalin the basic features.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sx-12 no-lt-gutter dbl-rt-gutter">
+        <div class="box-alt">
+        	<div class="col-xs-12">
+                <h3>Lorem ipsum dolor sit amet</h3>
+                <p>
+                    Lorem ipsum dolor sit ament, consectetur adipisicing elit, sed do eiusmod tempor incididnut ut albore.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- end full width boxes -->
+   
+    
+</div>
+<script>
+$(function(){
+	$('#mySearchBtn').click(function(){
+		$('#searchResults').removeClass('hide');
+		
+	});
+});
+</script>
+	

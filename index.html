@@ -76,7 +76,7 @@
                                 </table>
                             </div>
                             <div class="col-xs-12">
-                            	 <button class="btn btn-success pull" type="button">Checkout</button>
+                            	 <button href="ajax/checkout_summary.html" class="btn btn-success pull load-content-demo" type="button">Checkout</button>
                             </div>
                             
                     	</div>
@@ -98,7 +98,7 @@
     <aside id="left-panel">
     	<nav>
         	<ul class="nav" id="side-nav">
-            	<li class="panel"><a class="active no-subnav" href="ajax/dashboard.html"><i class="fa fa-th fa-fw"></i><span class="hidden-sm hidden-sm hidden-xs">Dashboard</span></a></li>
+            	<li class="panel"><a class="active no-subnav-demo" href="ajax/dashboard.html"><i class="fa fa-th fa-fw"></i><span class="hidden-sm hidden-sm hidden-xs">Dashboard</span></a></li>
                 <li class="panel">
                 	<a data-toggle="collapse" data-parent="#side-nav" href="#domain">
                     	<i class="fa fa-chain fa-fw"></i>
@@ -134,7 +134,7 @@
                         <span class="hidden-sm hidden-sm hidden-xs">Support (1)</span>
                     </a>
                     <ul class="panel-collapse collapse" id="support">
-                    	<li><a href="javascript:void(0);">Knowledge base</a></li>
+                    	<li><a href="ajax/knowledge_base.html">Knowledge base</a></li>
                         <li><a href="javascript:void(0);">Submit a new ticket</a></li>
                     	<li><a href="javascript:void(0);">Open support tickets</a></li>
                         <li><a href="javascript:void(0);">Closed support tickets</a></li>
@@ -176,7 +176,7 @@ $(function(){
 	});
 	
 	// nav with no subnav
-	$('.no-subnav').click(function(e){
+	$('.no-subnav-demo').click(function(e){
 		e.preventDefault();
 		load_content($(this));
 	});
@@ -188,14 +188,14 @@ $(function(){
 	}
 	
 	// delete cart item
-	$(document).on('click','.delete-item',function(e){
+	$(document).on('click','.delete-item-demo',function(e){
 		// prevent dropdown from closing
 		e.stopPropagation()
 		$(this).parent().parent().remove();
 	});
 	
 	// load content on link click
-	$(document).on('click','.load-content',function(e){
+	$(document).on('click','.load-content-demo',function(e){
 		e.preventDefault();
 		load_content_inner_page($(this));
 	});

@@ -1,28 +1,96 @@
 <h3 class="page-header">Checkout</h3>
 <ul class="nav nav-tabs" role="tablist">
-    <li class="active"><a href="#summary">Symmary</a></li>
-    <li><a href="#payment">Payment</a></li>
-    <li><a href="#finished">Finished</a></li>
+    <li class="active"><a href="ajax/checkout_summary.html" class="load-content-demo">Symmary</a></li>
+    <li><a href="ajax/payment.html" class="load-content-demo">Payment</a></li>
+    <li><a href="ajax/finished.html" class="load-content-demo">Finished</a></li>
 </ul>
 
 <h3>Your shopping cart</h3>
 
 <div class="table-responsive">
-	<table class="table table-expanded">
+	<table class="table table-expanded table-alt">
     	<thead>
         	<tr>
             	<th>Service</th>
                 <th>Domain</th>
                 <th>Client</th>
                 <th>Period</th>
-                <th>Price</th>
+                <th class="pull-text">Price</th>
             </tr>
         </thead>
         <tbody>
         	<tr>
-            	<td></td>
+            	<td>Domain registration</td>
+                <td>exampledomain.net.au</td>
+                <td><i class="fa fa-plus-circle text-muted"></i> Assign</td>
+            	<td>
+                	<select>
+                        <option>1 Year</option>
+                        <option selected>2 Years</option>
+                        <option>3 Years</option>
+                        <option>4 Years</option>
+                        <option>5 Years</option>
+                    </select>
+                </td>
+                <td class="pull-text">$38.00 <a href="javascript:void(0);"><i class="fa fa-times-circle text-primary pulled-icon"></i></a></td>
+            </tr>
+            <tr>
+            	<td>Domain transfer</td>
+                <td>exampledomain.net</td>
+                <td><i class="fa fa-minus-circle text-success-alt"></i> John Doe</td>
+            	<td>
+                	<select>
+                        <option selected>1 Year</option>
+                        <option>2 Years</option>
+                        <option>3 Years</option>
+                        <option>4 Years</option>
+                        <option>5 Years</option>
+                    </select>
+                </td>
+                <td class="pull-text">$18.00 <a href="javascript:void(0);"><i class="fa fa-times-circle text-primary pulled-icon"></i></a></td>
+            </tr>
+            <tr>
+            	<td>Domain registration</td>
+                <td>exampledomain.org.au</td>
+                <td><i class="fa fa-plus-circle text-muted"></i> Assign</td>
+            	<td><span class="table-cell">1 year</span></td>
+                <td class="pull-text">$18.00 <a href="javascript:void(0);"><i class="fa fa-times-circle text-primary pulled-icon"></i></a></td>
+            </tr>
+            <tr>
+            	<td>Account Top Up</td>
+                <td colspan="3">&nbsp;</td>
+                <td class="pull-text">
+                	<div class="table-alt-group pull">
+                    	<input type="text" class="form-control input-sml pull-text" value="$2000.00">                
+                    	<a href="javascript:void(0)"><i class="fa fa-times-circle text-primary pulled-icon pull"></i></a>
+                   	</div>
+               </td>
+            </tr>
+            <tr>
+            	<td colspan="4">&nbsp;</td>
+                <td class="pull-text">
+					<strong>GST <span class="gap"></span>$207.00</strong>
+               </td>
+            </tr>
+            <tr>
+            	<td colspan="4">&nbsp;</td>
+                <td class="pull-text">
+					<strong>Total: <span class="gap"></span>$2281.40</strong>
+               </td>
             </tr>
         </tbody>
+        <tfoot>
+        	<tr>
+                <td colspan="5" class="pull-text">
+                	<button class="btn btn-default-alt">Empty Cart</button> <a href="ajax/payment.html" class="btn btn-success load-content-demo">Continue</a>
+                </td>
+            </tr>
+        </tfoot>
     </table>
 
 </div>
+<script>
+$(function(){
+	$('select').select2();
+});
+</script>
