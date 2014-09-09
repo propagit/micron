@@ -1,40 +1,40 @@
 <h3 class="page-header primary-header">Welcome, John Doe</h3>
 
-<div class="dash-wrap">
-    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 no-lt-gutter">
-    	<div class="box">
+<div id="dash-wrap">
+    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 box-md-6">
+    	<div class="box group1">
         	<h4>Domains</h4>
 			<div id="chart_domains"></div>
-			<div id="cover_chart_domains"></div>
+			<div class="grid grid-250"></div>
         </div>    
     </div>
     
     
-    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
-        <div class="box">
+    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 box-md-6">
+        <div class="box group1">
         	<h4>Clients</h4>
 			<div id="chart_clients"></div>
-			<div id="cover_chart_clients"></div>
+			<div class="grid"></div>
         </div>    
     </div>
     
     
-    <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
-        <div class="box">
+    <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12 box-md-12">
+        <div class="box group1">
         	<h4>Account Balance</h4>
 			<div class="box-balance">
 				<div>$1585.00</div>
 			</div>
-			<div id="cover_box_balance"></div>
+			<div class="grid"></div>
 			<div class="row text-balance">
-				<div class="col-md-3">
+				<div class="col-xs-4">
 					<span class="fa-stack fa-lg pull-right">
 						<i class="fa fa-circle text-success fa-stack-2x"></i>
 						<i class="fa fa-check fa-stack-1x fa-inverse"></i>
 					</span>
 				</div>
-				<div class="col-md-8 no-lt-gutter">
-					You are above your minimum balance.<br />All domains will automatically renew.
+				<div class="col-xs-6 no-lt-gutter">
+					You are above your minimum balance. All domains will automatically renew.
 				</div>
 			</div>
         </div>
@@ -43,9 +43,9 @@
     <div class="clear"></div>
     
     
-    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 no-lt-gutter">
+    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
     	<div class="box">
-            <h4>Register a Domain</h4>
+            <h4 class="group2">Register a Domain</h4>
             <a class="icon-svg icon-download">&nbsp </a>
             <button class="btn btn-default-alt fw">Register now</button>
         </div>
@@ -54,7 +54,7 @@
     
     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
     	<div class="box">
-            <h4>Transfer a Domain</h4>
+            <h4 class="group2">Transfer a Domain</h4>
             <a class="icon-svg icon-upload">&nbsp </a>
             <button class="btn btn-default-alt fw">Transfer now</button>
         </div>
@@ -62,7 +62,7 @@
     
     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
     	<div class="box">
-            <h4>Support Tickets</h4>
+            <h4 class="group2">Support Tickets</h4>
             <div class="icon-svg icon-user-md">&nbsp <div class="icon-svg icon-message">2</div></div>
             <button class="btn btn-success fw">Respond now</button>
         </div>
@@ -70,7 +70,7 @@
     
     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
     	<div class="box">
-            <h4>Invoices</h4>
+            <h4 class="group2">Invoices</h4>
             <div class="icon-svg icon-envelope">&nbsp  <div class="icon-svg icon-badge">10</div></div>
             <button class="btn btn-success fw">View now</button>
         </div>
@@ -239,5 +239,15 @@ $(function () {
 			
 		}).add();
 	});
+	
+	// unify height
+	$('.group1').unify_height();
+	$('.group2').unify_height();
 });
+
+$(window).resize(function(){
+	$('.group2').unify_height();
+	$('.group2').unify_height();
+});
+
 </script>

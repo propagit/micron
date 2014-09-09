@@ -81,7 +81,7 @@ h3{
 }
 
 #left-panel{
-	position:fixed;
+	position:absolute;
 	top: 0;
 	left: 0;
 	z-index: 904;
@@ -273,11 +273,11 @@ nav .nav li a > span{
 	line-height: normal;
 	width: 27px;
 	position: absolute;
-	font-size: 36px;
+	font-size: 26px;
 	color: #b7db27;
 	line-height: 35px;
 	margin-left: 100px;
-	margin-top: -14px;	
+	margin-top: -1px;
 }
 
 /** table */
@@ -524,7 +524,6 @@ html[dir="rtl"] .select2-container .select2-choice .select2-arrow,
 	border-radius:0;	
 	color:#1d1d1d;
 	font-size:18px;
-	margin-left:20px;
 }
 .btn-muted{
 	background-color:#f5f5f5;
@@ -850,37 +849,58 @@ tbody.no-border td{
 	font-size:18px;	
 }*/
 /** Dashboard */
-#cover_chart_domains {
+#dash-wrap{
+	margin-left:-15px;	
+}
+.grid{
 	background: url(../img/bg-grid.png);
 	height: 200px;
-	width: 200px;
+	width:100%;
 	z-index: 1000;
 	position: absolute;
 	margin-top: -200px;
-	margin-left: 100px;
+	background-repeat:repeat;
+	right:0;
+}
+.grid-250{
+	width:250px;	
+}
+/*#cover_chart_domains {
+	background: url(../img/bg-grid.png);
+	height: 200px;
+	width: 100%;
+	z-index: 1000;
+	position: absolute;
+	margin-top: -200px;
+	margin-left: 195px;
+	background-repeat:repeat
 }
 #cover_chart_clients {
 	background: url(../img/bg-grid.png);
 	height: 200px;
-	width: 200px;
+	min-width: 200px;
 	z-index: 1000;
 	position: absolute;
 	margin-top: -200px;
+	background-repeat:repeat;
 }
 #cover_box_balance {
 	background: url(../img/bg-grid.png);
 	height: 100px;
-	width: 400px;
+	width: 100%;
 	z-index: 1000;
 	position: absolute;
 	margin-top: -100px;
-}
+	background-repeat:repeat;
+	float:left;
+}*/
 .box{
 	-webkit-box-shadow: 1px 2px 8px 2px #ccc;
     box-shadow: 1px 2px 8px 2px #ccc;
 	padding:20px;
 	margin-bottom:30px;
 }
+
 .box-alt{
 	background-color:#f5f5f5	;
 	min-height:150px;
@@ -898,6 +918,7 @@ tbody.no-border td{
 	font-size: 50px;
 	text-align: center;
 }
+
 .box-balance div {
 	background: #000;
 	color: #B7DB27;
@@ -910,13 +931,18 @@ tbody.no-border td{
 .box h4{
 	font-family:'Eurostile', sans-serif;
 	padding-top:0;
-	padding-bottom:10px;
+	margin-bottom:10px;
 	margin:0;
 	font-size: 23px;
 }
 
 .box .icon-svg{
 	margin-bottom:10px;	
+}
+
+/** HiChart CSS addition */
+.highcharts-container{
+	margin:auto;	
 }
 
 .icon-download{
@@ -1035,13 +1061,20 @@ tbody.no-border td{
 	}
 
 }
-
+@media(max-width:1440px){
+	.box-md-6{
+		width:50%;	
+	}
+	.box-md-12{
+		width:100%;
+	}	
+}
 
 /** helper classes - bs overwrites */
 #content .page-header{
 	margin-top:0;	
 	font-family:'Eurostile', sans-serif;
-	font-size:44px;
+	font-size:40px;
 	color:#595959;
 	border-bottom:none;
 	padding-top:10px;

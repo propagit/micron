@@ -105,9 +105,21 @@
 		var append_class = $this.attr('data-class');
 		$('.actionBtn').action_button(target,append_class);
 	});
+
+	// unify height for similar containers
+	$.fn.unify_height = function(){
+		var $this = $(this);
+		$this.css({'min-height':0});
+		var maxHeight = 0;
+		$this
+		  .each(function() { maxHeight = Math.max(maxHeight, $(this).height()); })
+		  .css({'min-height':maxHeight});
+		return this;
+	};
 	
-	
-	
+	$.fn.adjust_nav_height = function(){
+		$(this).css({'height':$(document).height()});	
+	};
 	
 	
 
