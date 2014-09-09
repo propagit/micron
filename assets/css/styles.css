@@ -87,6 +87,15 @@ h3{
 	z-index: 904;
 	padding-top: 45px;	
 }
+#left-panel-logo{
+	position:fixed;
+	bottom:0;
+	width:345px;
+	padding:30px;	
+}
+#left-panel-logo img{
+	width:100%;	
+}
 #top-group .nav li{
 	float:left;
 	height:100%;
