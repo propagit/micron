@@ -137,7 +137,7 @@ $(function () {
     
 	function(chart) { // on complete
 	
-		var xpos = '67%';
+		var xpos = '68%';
 		var ypos = '50%';
 		var circleradius = 72;
 		var total = 0;
@@ -152,7 +152,7 @@ $(function () {
 		}).add();
 
 		// Render the text 
-		chart.renderer.text('<span id="chart_domains_total">' + total + '</span>', 165, 100).css({
+		chart.renderer.text('<span id="chart_domains_total">' + total + '</span>', 265, 100).css({
 			color: '#B7DB27',
 			fontSize: '50px',
 			textAlign: 'center',
@@ -163,7 +163,7 @@ $(function () {
 		}).add();
 		
 		// Render icon
-		chart.renderer.image('assets/img/icon-chain.png', 178, 120, 30, 30).css({
+		chart.renderer.image('assets/img/icon-chain.png', 275, 120, 30, 30).css({
 			
 		}).attr({
 			
@@ -248,6 +248,7 @@ $(function () {
 $(window).resize(function(){
 	$('.group2').unify_height();
 	$('.group2').unify_height();
+
 });
 
 </script>
