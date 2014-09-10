@@ -795,7 +795,7 @@ tbody.no-border td{
 .nav-tabs > li a {
 	color: #8c8c8c;
 	font-family:'Eurostile', sans-serif;
-	font-size:25px;
+	font-size:1.8em;
 }
 .nav-tabs > li:first-child a{
 	padding-left:0;	
@@ -905,6 +905,9 @@ tbody.no-border td{
 	float:left;
 	margin-bottom:30px;
 	width:100%;
+}
+.box-150 {
+	min-height: 170px;	
 }
 .box-alt h3{
 	padding-top:0;	
@@ -1066,6 +1069,9 @@ tbody.no-border td{
 	.box-md-12{
 		width:100%;
 	}
+	.nav-tabs > li a {
+		font-size:1.2em;
+	}
 }
 
 @media(max-width:1100px) {
@@ -1078,6 +1084,9 @@ tbody.no-border td{
 	}
 	.grid-250 {
 		left: 280px;
+	}
+	.nav-tabs > li a {
+		font-size:1em;
 	}
 }
 @media(max-width:769px) {
