@@ -46,6 +46,14 @@ html, body{
 	padding: 18px 12px;
 	font-size:18px;
 }
+@-moz-document url-prefix() { 
+	.login-form .form-control{
+		padding: 5px 10px;
+		height: 39px;
+
+	}
+}
+
 .login-form .btn{
 	font-size:18px;	
 }
