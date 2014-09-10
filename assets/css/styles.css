@@ -311,9 +311,24 @@ nav .nav li a > span{
 	padding-left: 28px;
 	padding-right: 10px;	
 }
+.table-alt .table-alt-group {
+	margin: 0;
+	padding: 0;
+}
+.table-alt .table-alt-group input.form-control {
+	padding: 0;
+	padding-right: 5px;
+	float: left;
+}
 .table-alt .table-alt-group .pulled-icon{
 	margin-top: -28px !important;
 }
+@-moz-document url-prefix() { 
+	.table-alt .table-alt-group .pulled-icon{
+		margin-right: -51px !important;
+	}
+}
+
 .table-expanded th,
 .table-expanded td{
 	vertical-align:middle !important;	
@@ -1098,6 +1113,11 @@ tbody.no-border td{
 	}
 	.grid-250 {
 		left: 280px;
+	}
+}
+@media(max-width:769px) {
+	.pm-lt-caret {
+		margin-left: 0;
 	}
 }
 /** helper classes - bs overwrites */
