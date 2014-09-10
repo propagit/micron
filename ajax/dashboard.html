@@ -109,14 +109,20 @@ $(function () {
         legend: {
 	        align: 'left',
 	        verticalAlign: 'top',
-	        itemMarginBottom: 10,
+	        itemMarginBottom: 15,
 	        itemStyle: { "font-family" : "'Source Sans Pro', sans-serif", "font-weight" : "normal", "font-size" : "14px"},
 	        layout: 'vertical',
+	        width: 100,
+	        symbolRadius: 15,
+	        symbolWidth: 15,
+	        symbolHeight: 15,
 	        margin: 0,
 	        padding: 0,
 	        navigation: {
 		        style: {  }
-	        }
+	        },
+	        x: -10,
+	        y: 10
         },
         series: [{
             type: 'pie',
@@ -152,7 +158,7 @@ $(function () {
 		}).add();
 
 		// Render the text 
-		chart.renderer.text('<span id="chart_domains_total">' + total + '</span>', 265, 100).css({
+		chart.renderer.text('<span id="chart_domains_total">' + total + '</span>', 285, 100).css({
 			color: '#B7DB27',
 			fontSize: '50px',
 			textAlign: 'center',
@@ -163,7 +169,7 @@ $(function () {
 		}).add();
 		
 		// Render icon
-		chart.renderer.image('assets/img/icon-chain.png', 275, 120, 30, 30).css({
+		chart.renderer.image('assets/img/icon-chain.png', 295, 120, 30, 30).css({
 			
 		}).attr({
 			
