@@ -10,8 +10,7 @@
 <!-- Domain search -->
 <h3>Search for a domain name</h3>
 
-<div class="col-lg-6 col-md-6 col-sm-10 col-xs-10 no-lt-gutter collapse-gap">
-
+<div class="col-lg-6 col-md-10 col-sm-10 col-xs-10 no-lt-gutter collapse-gap">
 	 <div class="input-group">
      <span class="input-group-addon text-muted">www.</span>
       <input type="text" class="form-control has-prepend-input actionBtn" data-target="#myActionBtn" data-class="btn-success">
@@ -36,8 +35,33 @@
     <!--end domain search -->
     
     
+</div><!-- end left panel-->
+
+<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 pull remove-gutters">
+    <div class="cart secondary-bg">
+    	<span class="cart-header">Domains in your cart</span>
+        <div class="col-xs-12 cart-contents">
+            <table>
+                <tr>
+                    <td>exampledomain.com <i class="fa fa-times-circle pull delete-item-demo pointer"></i></td>
+                </tr>
+                <tr>
+                    <td>exampledomain.com <i class="fa fa-times-circle pull delete-item-demo pointer"></i></td>
+                </tr>
+                <tr>
+                    <td>Total: <span class="pull">$36.00</span></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-xs-12 secondary-bg">
+             <a class="btn btn-success pull load-content-demo" href="ajax/checkout_summary.html">Checkout</a>
+        </div>
+    </div>
+</div><!-- end right panel [ cart panel] -->
+
+<div class="clear"></div>
     <!-- search result -->
-    <div id="domainSearchResults" class="table-responsive search-results hide">
+    <div id="domainSearchResults" class="table-responsive search-results hide" width="100%">
     	<table class="table">
         	<thead>
             	<tr>
@@ -127,31 +151,6 @@
     </div>
     
     <!-- end search result -->
-</div><!-- end left panel-->
-
-<div class="col-lg-4 col-md-8 col-sm-12 col-xs-12 pull remove-gutters">
-    <div class="cart secondary-bg">
-    	<span class="cart-header">Domains in your cart</span>
-        <div class="col-xs-12 cart-contents">
-            <table>
-                <tr>
-                    <td>exampledomain.com <i class="fa fa-times-circle pull delete-item-demo pointer"></i></td>
-                </tr>
-                <tr>
-                    <td>exampledomain.com <i class="fa fa-times-circle pull delete-item-demo pointer"></i></td>
-                </tr>
-                <tr>
-                    <td>Total: <span class="pull">$36.00</span></td>
-                </tr>
-            </table>
-        </div>
-        <div class="col-xs-12 secondary-bg">
-             <a class="btn btn-success pull load-content-demo" href="ajax/checkout_summary.html">Checkout</a>
-        </div>
-    </div>
-</div><!-- end right panel [ cart panel] -->
-
-
 
 </div>
 <script>
