@@ -16,7 +16,7 @@
     src:url(../fonts/Eurostile/eurostile.TTF);
 }
 html{
-	background:#fff;
+	background:#1a1a1a;
 }
 body{
 	height:100%;	
@@ -87,6 +87,7 @@ h3{
 	z-index: 904;
 	padding-top: 45px;	
 	height: 100%;
+	background-color:#1a1a1a;
 }
 #left-panel-logo{
 	position:fixed;
