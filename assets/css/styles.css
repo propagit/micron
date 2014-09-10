@@ -1122,9 +1122,6 @@ tbody.no-border td{
 }
 
 @media all and (-ms-high-contrast:none) {
-	.table-alt .table-alt-group .pulled-icon{
-		margin-right: -51px !important;
-	}
 	.form-control{
 		padding: 5px 10px;
 		height: 39px;
