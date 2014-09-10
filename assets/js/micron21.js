@@ -118,7 +118,7 @@
 	};
 	
 	$.fn.adjust_nav_height = function(){
-		$(this).css({'height':$(document).height()});	
+		$(this).css({'height':$(document).height() + 300});	
 	};
 	
 	
