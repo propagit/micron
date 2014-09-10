@@ -1027,9 +1027,15 @@ tbody.no-border td{
 }
 
 /** Tablet */
-@media only screen and (max-width: 992px){
+@media only screen and (max-width: 1200px){
 	aside{
 		width:100px;	
+	}
+	.hidden-sm {
+		display: none;
+	}
+	.hidden-xs {
+		display: none;
 	}
 	nav ul ul{
 		display:block;
@@ -1084,9 +1090,6 @@ tbody.no-border td{
 	}
 	.grid-250 {
 		left: 280px;
-	}
-	.nav-tabs > li a {
-		font-size:1em;
 	}
 }
 @media(max-width:769px) {

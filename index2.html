@@ -106,9 +106,9 @@
                         <span class="hidden-sm hidden-xs">Domains (16)</span>
                     </a>
                 	<ul class="panel-collapse collapse" id="domain" role="menu">
-                    	<li><a href="ajax/domains.html">Domain names</a></li>
+                    	<li><a data-toggle="ajax" href="ajax/domains.html">Domain names</a></li>
                     	<li><a href="javascript:void(0);">Domain contacts</a></li>
-                        <li><a href="ajax/register_domain.html">Register a domain</a></li>
+                        <li><a data-toggle="ajax" href="ajax/register_domain.html">Register a domain</a></li>
                         <li><a href="javascript:void(0);">Transfer a domain</a></li>
                         <li><a href="javascript:void(0);">WHOIS lookup</a></li>
                     </ul>
@@ -134,7 +134,7 @@
                         <span class="hidden-sm hidden-sm hidden-xs">Support (1)</span>
                     </a>
                     <ul class="panel-collapse collapse" id="support">
-                    	<li><a href="ajax/knowledge_base.html">Knowledge base</a></li>
+                    	<li><a data-toggle="ajax" href="ajax/knowledge_base.html">Knowledge base</a></li>
                         <li><a href="javascript:void(0);">Submit a new ticket</a></li>
                     	<li><a href="javascript:void(0);">Open support tickets</a></li>
                         <li><a href="javascript:void(0);">Closed support tickets</a></li>
@@ -146,20 +146,21 @@
                 <li class="panel">
                 	<a data-toggle="collapse" data-parent="#side-nav" href="#ui-elements"><i class="fa fa-desktop fa-fw"></i><span class="hidden-sm hidden-sm hidden-xs">UI Elements</span></a>
                     <ul class="panel-collapse collapse" id="ui-elements">
-                    	<li><a href="ajax/fa.html">Icons</a></li>
-                        <li><a href="ajax/ui-general-elements.html">General UI Elements</a></li>
-                        <li><a href="ajax/datatables.html">Tables</a></li>
-                        <li><a href="ajax/tabs.html">Tabs</a></li>
-                        <li><a href="ajax/modals.html">Modals</a></li>
-                        <li><a href="ajax/page_modal.html">Full Page Modal</a></li>
-                        <li><a href="ajax/action_button.html">Action Button</a></li>
+                    	<li><a data-toggle="ajax" href="ajax/fa.html">Icons</a></li>
+                        <li><a data-toggle="ajax" href="ajax/ui-general-elements.html">General UI Elements</a></li>
+                        <li><a data-toggle="ajax" href="ajax/datatables.html">Tables</a></li>
+                        <li><a data-toggle="ajax" href="ajax/tabs.html">Tabs</a></li>
+                        <li><a data-toggle="ajax" href="ajax/modals.html">Modals</a></li>
+                        <li><a data-toggle="ajax" href="ajax/page_modal.html">Full Page Modal</a></li>
+                        <li><a data-toggle="ajax" href="ajax/action_button.html">Action Button</a></li>
                     </ul>
                 </li>
                 <li class="panel nav-hr"></li>
                 <li class="panel">
                 	<a data-toggle="collapse" data-parent="#side-nav" href="#pages"><i class="fa fa-file-o fa-fw"></i><span class="hidden-sm hidden-xs">Pages</span></a>
                 	<ul class="panel-collapse collapse" id="pages">
-                		<li><a href="ajax/checkout_summary.html">Checkout</a></li>
+                		<li><a data-toggle="ajax" href="ajax/checkout_summary.html">Checkout</a></li>
+                		<li><a href="index.html">Login</a></li>
                 	</ul>
                 </li>
             </ul>
@@ -179,7 +180,7 @@
 <script>
 $(function(){
 	
-	$('nav .panel ul li a').click(function(e){
+	$('nav .panel ul li a[data-toggle="ajax"]').click(function(e){
 		e.preventDefault();
 		load_content($(this));
 	});
