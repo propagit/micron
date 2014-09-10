@@ -206,6 +206,10 @@ $(function(){
 	
 	// adjust nav height
 	$('#left-panel').adjust_nav_height();
+	
+	$('body').change('height', function(){
+		$('#left-panel').adjust_nav_height();
+	})
 });
 
 function load_content(obj){
@@ -225,7 +229,7 @@ function load_content_inner_page(obj){
 }
 
 $(window).resize(function(){
-	$('#left-panel').adjust_nav_height();
+	
 });
 </script>
 
