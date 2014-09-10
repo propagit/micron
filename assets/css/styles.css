@@ -288,6 +288,10 @@ nav .nav li a > span{
 	margin-left: 100px;
 	margin-top: -1px;
 }
+/** tab */
+.tab-pane {
+	margin: 10px 0;
+}
 
 /** table */
 .table i.fa {
@@ -872,7 +876,12 @@ tbody.no-border td{
 	right:0;
 }
 .grid-250{
-	width:250px;	
+	width:200px;
+	left: 140px;
+}
+
+#chart_domains {
+	float: left;
 }
 /*#cover_chart_domains {
 	background: url(../img/bg-grid.png);
@@ -1076,9 +1085,21 @@ tbody.no-border td{
 	}
 	.box-md-12{
 		width:100%;
-	}	
+	}
 }
 
+@media(max-width:1100px) {
+	.box-md-6{
+		width:100%;	
+	}	
+	#chart_domains {
+		text-align: center;
+		float: none;
+	}
+	.grid-250 {
+		left: 280px;
+	}
+}
 /** helper classes - bs overwrites */
 #content .page-header{
 	margin-top:0;	

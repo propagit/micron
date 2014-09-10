@@ -1,16 +1,17 @@
 <h3 class="page-header primary-header">Welcome, John Doe</h3>
 
 <div id="dash-wrap">
-    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 box-md-6 hidden-sm hidden-xs">
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 box-md-6 hidden-sm hidden-xs">
     	<div class="box group1">
         	<h4>Domains</h4>
 			<div id="chart_domains"></div>
+			<div class="clear"></div>
 			<div class="grid grid-250"></div>
         </div>    
     </div>
     
     
-    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 box-md-6 hidden-sm hidden-xs">
+    <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 box-md-6 hidden-sm hidden-xs">
         <div class="box group1">
         	<h4>Clients</h4>
 			<div id="chart_clients"></div>
@@ -86,6 +87,7 @@ $(function () {
             plotBorderWidth: 0,
             plotShadow: false,
         	height: 200,
+        	width: 300,
 			margin: [0, 0, 0, 0]
         },
         colors: ['#B7DB27', '#FFE827', '#FDAD50', '#D2392A', '#3088CD'],
@@ -151,6 +153,7 @@ $(function () {
 		{
 			total += chart.series[0].data[i].y;
 		}
+		
     
 		// Render the circle
 		chart.renderer.circle(xpos, ypos, circleradius).attr({
@@ -158,7 +161,7 @@ $(function () {
 		}).add();
 
 		// Render the text 
-		chart.renderer.text('<span id="chart_domains_total">' + total + '</span>', 285, 100).css({
+		chart.renderer.text('<span id="chart_domains_total">' + total + '</span>', 175, 100).css({
 			color: '#B7DB27',
 			fontSize: '50px',
 			textAlign: 'center',
@@ -169,7 +172,7 @@ $(function () {
 		}).add();
 		
 		// Render icon
-		chart.renderer.image('assets/img/icon-chain.png', 295, 120, 30, 30).css({
+		chart.renderer.image('assets/img/icon-chain.png', 185, 120, 30, 30).css({
 			
 		}).attr({
 			
