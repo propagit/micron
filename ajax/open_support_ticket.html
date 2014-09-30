@@ -1,1 +1,128 @@
-<h3 class="page-header">My email is not working</h3>
+<h3 class="page-header">Support</h3>
+<ul class="nav nav-tabs" role="tablist">
+    <li><a href="ajax/knowledge_base.html" class="load-content-demo">Knowledge base</a></li>
+    <li><a href="ajax/new_tickets.html" class="load-content-demo">Submit a new ticket</a></li>
+    <li class="active"><a href="ajax/open_tickets.html" class="load-content-demo">Open support tickets</a></li>
+    <li><a href="ajax/closed_tickets.html" class="load-content-demo">Closed support tickets</a></li>
+</ul>
+
+<div class="table-responsive">
+    <table class="table selectable" id="support-tickets">
+        <thead>
+            <tr>
+                <th>Submitted</th>
+                <th>Ticket</th>
+                <th>Subject</th>
+                <th>Last response</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="pageModal" data-target="#myModal">
+                <td>12/06/2014</td>
+                <td>17385</td>
+                <td>Is the internet really made of tubes?</td>
+                <td>13/06/2014</td>
+                <td><i class="fa fa-circle text-info"></i> Created</td>
+            </tr>
+            <tr class="pageModal" data-target="#myModal">
+                <td>01/06/2014</td>
+                <td>16343</td>
+                <td>My email is not working</td>
+                <td>13/06/2014</td>
+                <td><i class="fa fa-circle text-warning"></i> Unread</td>
+            </tr>
+            <tr class="pageModal" data-target="#myModal">
+                <td>23/05/2014</td>
+                <td>12018</td>
+                <td>A client is not receving invoices</td>
+                <td>02/06/2014</td>
+                <td><i class="fa fa-circle text-success"></i> Replied</td>
+            </tr>
+            <tr class="pageModal" data-target="#myModal">
+                <td>18/04/2014</td>
+                <td>08634</td>
+                <td>Can you help with DNS setup?</td>
+                <td>02/05/2013</td>
+                <td><i class="fa fa-circle text-muted"></i> Read</td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
+<!-- Modal 1 -->
+<div class="modal fade page-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <span class="pm-lt-caret"><i class="fa fa-caret-left"></i></span>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close closePM" data-close="#myModal"><i class="fa fa-times"></i><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">My email is not working</h4>
+      </div>
+      <div class="modal-body">
+			<div class="col-xs-9 tickets">
+            	<div class="avatar">
+                	<i class="fa fa-user fa-5x"></i>
+                </div>
+                <div class="ticket-body">
+                	<h3>Reply</h3>
+                    <textarea class="form-control"></textarea>
+                    <div class="vgap"></div>
+                    <button type="button" class="btn btn-success">Submit</button><span class="gap"></span><i class="fa fa-upload text-success"></i> Upload attachment
+                </div>
+                
+                <hr>
+                
+                <div class="avatar">
+                	<i class="fa fa-user fa-5x"></i>
+                </div>
+                <div class="ticket-body">
+                	<h3>Micron21 Support</h3>
+                    <span class="date">Posted: 01/01/2014</span>
+                    <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                </div>
+                
+                <hr>
+                
+                <div class="avatar">
+                	<i class="fa fa-user fa-5x"></i>
+                </div>
+                <div class="ticket-body">
+                	<h3>Morgan Plumley</h3>
+                    <span class="date">Posted: 01/01/2014</span>
+                    <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                    <img class="attachment" src="">
+                </div>
+            </div>
+
+      </div><!-- modal-body-->
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- page-modal-1 -->
+            
+<!-- Data Tables -->
+<script>
+$(document).ready(function() {
+    $('#support-tickets').dataTable({
+      	"dom" : '<"top"f<"manify">i>rt<"row"<"col-md-6"p><"col-md-6"l>><"clear">',
+        "lengthMenu": [[10, 30, 60, 90], ["10 Rows", "30 Rows", "60 Rows", "90 Rows"]],
+        "language" : {
+            "paginate": {
+                "next" : "&raquo;",
+                "previous" : "&laquo;"
+            },
+            "lengthMenu" : "View _MENU_ "
+        },
+		"info": 		false, // disable info - showing 8 records per page etc
+		"bFilter":  false, // disable search bar
+    });
+    $('select').select2();
+	
+});
+
+
+</script>

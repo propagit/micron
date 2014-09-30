@@ -1057,6 +1057,29 @@ tbody.no-border td{
 	background-color:#CBCBCB;	
 }
 
+
+/** Support Ticket Conversation */
+.tickets hr{
+	border-bottom:1px solid #b7db27;	
+}
+.ticket-body{
+	margin-left:100px;
+	margin-top: -105px;
+}
+.ticket-body span.date{
+	float: right;
+	margin-top: -30px;	
+	color:#8c8c8c;
+}
+.avatar{
+	width:100px;	
+}
+
+textarea.form-control{
+	min-height:85px;	
+}
+
+
 /** Tablet */
 @media only screen and (max-width: 1200px){
 	aside{
@@ -1276,6 +1299,10 @@ tbody.no-border td{
 .gap{
 	width:20px;
 	display:inline-block	
+}
+.vgap{
+	height:20px;
+	display:block;	
 }
 
 
