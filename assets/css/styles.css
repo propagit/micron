@@ -16,7 +16,8 @@
     src:url(../fonts/Eurostile/eurostile.TTF);
 }
 html{
-	background:#1a1a1a;
+	/*background:#1a1a1a;*/
+	background:#fff;
 }
 body{
 	height:100%;	
@@ -42,7 +43,7 @@ aside{
 	display: block;
 	background: #1a1a1a;
 	min-height: 100%;
-	width:345px;	
+	width:225px;	
 }
 
 .clear {
@@ -73,7 +74,7 @@ h3{
 /** Top Header */
 #header{
 	display: block;
-	height: 45px;
+	height: 32px;
 	background-color:#1a1a1a;
 	z-index: 9905;	
 	position:fixed;
@@ -81,18 +82,18 @@ h3{
 }
 
 #left-panel{
-	position:absolute;
+	position:fixed;
 	top: 0;
 	left: 0;
 	z-index: 904;
-	padding-top: 45px;	
+	padding-top: 32px;	
 	height: 100%;
 	background-color:#1a1a1a;
 }
 #left-panel-logo{
 	position:fixed;
 	bottom:0;
-	width:345px;
+	width:225px;
 	padding:30px;	
 	background: #1A1A1A;
 }
@@ -116,27 +117,29 @@ h3{
 #top-group .nav ul li{
 	width:100%;	
 }
+
 #top-group .nav ul{
-	width:100%;
-	border-color:#1a1a1a;
-	position:relative;
-	background-color:#1a1a1a;
-	border-radius:0;
-	padding-top:0;
-	margin-top:1px;
+	border-color: #1a1a1a;
+	position: absolute;
+	background-color: #1a1a1a;
+	border-radius: 0;
+	padding-top: 0;
+	margin-top: 4px;
+	left: auto;
+	right: 0px;
 }
 #top-group .nav li a{
-	color:#b7b7b7;
-	padding-top: 9px;
-	padding-bottom: 7px;
-	font-size:20px;
-	font-weight:200;
+	color: #b7b7b7;
+	padding-top: 4px;
+	padding-bottom: 1px;
+	font-size: 16px;
+	font-weight: 300;
 }
 #top-group .nav>li>a:hover, 
 #top-group .nav>li>a:focus,
 #top-group .nav>li>a:active,
 #top-group .nav>li>a.active{
-	background-color:transparent;	
+	background-color:transparent !important;	
 }
 
 #top-group .nav .open>a, 
@@ -196,7 +199,7 @@ nav .nav > li > a.active:before {
 	right: -16px;
 	font-size: 36px;
 	color: #fff;
-	line-height: 35px;
+	line-height: 50px;
 }
 
 .nav-pointer-backdrop:before{
@@ -210,14 +213,16 @@ nav a{
 	color:#fff;	
 }
 nav .nav > li > a{
-	padding: 20px 25px;
-	height: 70px;
+	padding: 0;
+	height: 50px;
+	line-height:40px;
+	padding-left:20px;
 }
 nav .nav > li > a > .fa-fw{
 
 }
 nav .nav li a{
-	font-size: 26px;
+	font-size: 20px;
 	font-weight: 100;
 	letter-spacing: 1px;	
 }
@@ -225,25 +230,36 @@ nav .nav > li > a{
 	font-family:'Eurostile', sans-serif;	
 }
 nav .nav ul li a{
-	font-size: 20px;
-	padding: 6px 30px;
+	font-size: 16px;
+	line-height: 32px;
 	float: left;
-	width:100%;
+	width: 100%;
+	padding-left: 20px;
 }
+.panel > ul li:first-child a{
+	padding-top:10px;	
+}
+.panel > ul li:last-child a{
+	padding-bottom:10px;	
+}
+
 
 nav .nav li a .fa{
 	color:#fff;	
-	font-size:38px;
+	font-size:32px;
+	line-height:50px;
 }
 nav .nav li a > span{
 	position:absolute;
-	margin-left:20px;
+	margin-left:15px;
+	display: inline-block;
+	line-height: 50px;
 }
 
 .nav-hr{
-	height: 1px;
+	height: 1px !important;
 	background-color: #2b2b2b !important;
-	width: 295px !important;
+	width: 175px !important;
 	margin-left: 25px;
 }
 /** top and side cart */
@@ -513,11 +529,13 @@ html[dir="rtl"] .select2-container .select2-choice .select2-arrow,
 	padding: 1px 0;	
 }
 .select-alt .select2-choice{
-	margin-top: -18px;
-	margin-left: -12px;
-	margin-right: -12px;
-	height: 36px;
-	border: none;	
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 8px;
+	height: 34px;
+	border: none;
+	background-image: none;
+	width: 100%;
 }
 .table-select2 .select2-choice{
 	border: none;
@@ -621,6 +639,7 @@ label{
 	box-shadow:none;
 	border-color:#d6d6d6;
 	border-width: 2px;
+	height:40px;
 }
 .radio label, 
 .checkbox label{
@@ -629,8 +648,8 @@ label{
 
 /** Content */
 #main{
-	margin-left: 345px;
-	padding-top: 45px;
+	margin-left: 225px;
+	padding-top: 32px;
 	height:100%;
 }
 #content{
@@ -655,13 +674,13 @@ label{
 	margin-left: 15px;	
 }
 .modal-backdrop-alt{
-	margin-left:345px;
-	margin-top:45px;	
+	margin-left:225px;
+	margin-top:32px;	
 }
 .page-modal{
-	top: 45px;
+	top: 32px;
 	width: 100%;
-	padding-left: 420px;
+	padding-left: 300px;
 	min-height: 600px;
 }
 .page-modal .modal-header{
@@ -669,7 +688,7 @@ label{
 }
 .page-modal .modal-title{
 	color: #595959;
-	font-size: 40px;
+	font-size: 32px;
 	font-weight: 300;
 	padding-left:20px;
 }
@@ -691,12 +710,12 @@ label{
 }
 
 .modal-backdrop-alt-2{
-	margin-left:345px;
-	margin-top:45px;	
+	margin-left:225px;
+	margin-top:32px;	
 	z-index:1050;
 }
 .page-modal-2{
-	padding-left:500px;	
+	padding-left:380px;	
 	z-index:1060;
 }
 .page-modal-sml{
@@ -831,9 +850,10 @@ tbody.no-border td{
 
 .nav-alert{
 	font-size: 15px !important;
-	margin-top: -45px;
-	margin-left: 35px;
+	margin-top: -62px;
+	margin-left: 28px;
 	float:left;
+	display:none;
 }
 .input-group-addon{
 	border-radius:0;
@@ -880,7 +900,7 @@ tbody.no-border td{
 	background: url(../img/bg-grid.png);
 	height: 200px;
 	width:100%;
-	z-index: 1000;
+	/*z-index: 1000;*/
 	position: absolute;
 	margin-top: -200px;
 	background-repeat:repeat;
@@ -1027,10 +1047,17 @@ tbody.no-border td{
 	height: 80px;	
 }
 
+.table tr:hover{
+	background-color:#F3F3F3;
+}
+.table tr.selected{
+	background-color:#CBCBCB;	
+}
+
 /** Tablet */
 @media only screen and (max-width: 1200px){
 	aside{
-		width:100px;	
+		width:80px;	
 	}
 	.hidden-sm {
 		display: none;
@@ -1041,16 +1068,24 @@ tbody.no-border td{
 	nav ul ul{
 		display:block;
 		position: absolute;
-		margin-left: 100px;
+		margin-left: 80px;
 		background-color: #1a1a1a;
-		min-width: 215px;
-		margin-top: -70px;
+		min-width: 182px;
+		margin-top: -50px;
+		float:left;
 	}
 	nav >ul >li{
 		height:70px;	
 	}
 	.nav-hr{
-		width:50px !important;	
+		width: 38px !important;
+		margin-left: 16px;	
+	}
+	nav .panel{
+		height:50px;	
+	}
+	.nav-alert{
+		display:block;	
 	}
 	#main{
 		margin-left:100px;	
@@ -1066,6 +1101,9 @@ tbody.no-border td{
 	}
 	.modal-backdrop-alt-2{
 		margin-left:100px;
+	}
+	nav .nav li a > span{
+		display:none;	
 	}
 
 }
@@ -1106,7 +1144,7 @@ tbody.no-border td{
 	}
 	.form-control{
 		padding: 5px 10px;
-		height: 39px;
+		height: 40px;
 	}
 	.form-control.has-prepend-input.actionBtn {
 		height: 40px;
@@ -1146,7 +1184,7 @@ tbody.no-border td{
 #content .page-header{
 	margin-top:0;	
 	font-family:'Eurostile', sans-serif;
-	font-size:40px;
+	font-size:32px;
 	color:#595959;
 	border-bottom:none;
 	padding-top:10px;
