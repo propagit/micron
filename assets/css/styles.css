@@ -641,6 +641,9 @@ label{
 	border-width: 2px;
 	height:40px;
 }
+.form-inline .form-control{
+	height:39px;	
+}
 .radio label, 
 .checkbox label{
 	padding-left:0;
