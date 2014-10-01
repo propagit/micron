@@ -115,4 +115,82 @@ $(":file").filestyle({icon: false});
 </section>
 
 
+<!--checkbox and radios -->
+<section>
+	<h3 class="page-header">Checkbox and Radios</h3>
+    <div class="col-xs-12 example ex-top">
+		<form role="form">
+			<div class="form-group">
+				<input type="checkbox"> Checkbox <div class="gap"></div>
+                <input type="checkbox" checked> Checkbox Checked
+			</div>
+            <div class="form-group">
+				<input type="radio"> Radio <div class="gap"></div>
+                <input type="radio" checked> Radio Checked
+			</div>
+		</form>
+	</div>
+	<!-- for html demo purpose only-->
+    <div class="col-xs-12 example ex-bottom">  
+HTML
+<pre>
+&lt;input type="checkbox"&gt; Checkbox 
+&lt;input type="checkbox" checked&gt; Checkbox Checked
+
+&lt;input type="radio"&gt; Radio
+&lt;input type="radio" checked&gt; Radio Checked
+</pre>
+Initiate Checkbox and Radio via jQuery
+<pre>
+Initiate Checkbox and Radio
+
+$(function(){
+  $('input').iCheck({
+    checkboxClass: 'icheckbox_square',
+    radioClass: 'iradio_square'
+  });
+});
+</pre>
+    </div>
+</section>
+<!--checkbox and radios -->
+
+<!-- headers -->
+<section>
+	<h3 class="page-header">Headers and Paragraphs</h3>
+    <div class="col-xs-12 example ex-top">
+		<h1>H1 Header</h1>
+        <h2>H2 Header</h2>
+        <h2 class="page-header">H3 Page Header</h2>
+        <h3>H3 Header</h3>
+        <p>
+        	This is a paragraph <br><br>
+        	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+	</div>
+    <!-- for html demo purpose only-->
+    <div class="col-xs-12 example ex-bottom"> 
+<pre>
+&lt;h1&gt;H1 Header&lt;/h1&gt;
+&lt;h2&gt;H2 Header&lt;/h2&gt;
+&lt;h2 class="page-header"&gt;H3 Page Header&lt;/h2&gt;
+&lt;h3&gt;H3 Header&lt;/h3&gt;
+&lt;p&gt;
+    This is a paragraph &lt;br&gt;&lt;br&gt;
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+&lt;/p&gt;
+</pre>
+	</div>
+</section>
+<!-- end headers -->
+
 <script type="text/javascript" src="assets/bootstrap/js/bootstrap-filestyle.min.js"> </script>
+<script>
+// iCheck init
+$(function(){
+  $('input').iCheck({
+    checkboxClass: 'icheckbox_square',
+    radioClass: 'iradio_square'
+  });
+});
+</script>
