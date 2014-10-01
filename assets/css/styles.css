@@ -1000,13 +1000,13 @@ tbody.no-border td{
   	background-size: auto 100%;
 	background-repeat:no-repeat;
 	background-position:center center;
-	height: 80px;
+	height: 90px;
 	position: relative;
-	margin-top: -21px;
+	margin-top: -24px;
 	color: #fff;
 	text-align: center;
-	padding-left: 44px;
-	padding-top: 17px;
+	padding-left: 48px;
+	padding-top: 21px;
 	font-size: 16px;
 }
 .icon-user-md{
