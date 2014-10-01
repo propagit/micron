@@ -641,6 +641,21 @@ label{
 	border-width: 2px;
 	height:40px;
 }
+.form-control.no-border {
+	border-color: #f9f9f9;
+}
+.bootstrap-filestyle .form-control {
+	background: #fafafa;
+	border-color: #f9f9f9;
+}
+.bootstrap-filestyle .input-group-btn {
+	border-left: 2px solid #ccc;
+}
+.bootstrap-filestyle .btn-default {
+	background: #fafafa;
+	border-color: #f9f9f9;
+}
+
 .form-inline .form-control{
 	height:39px;	
 }
