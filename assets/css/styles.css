@@ -12,6 +12,10 @@
 */
 
 @font-face {
+    font-family: Eurostile;
+    src:url(../fonts/Eurostile/eurostile.TTF);
+}
+@font-face {
     font-family: Euros;
     src:url(../fonts/Eurostile/eurostile.TTF);
 }
@@ -927,19 +931,30 @@ tbody.no-border td{
 #dash-wrap{
 	margin-left:-15px;	
 }
+.grid-circle{
+	/*background: url(../img/bg-grid.png);
+	height: 143px;
+	width: 143px;
+	z-index: 1000;
+	position: absolute;
+	margin-top: -172px;
+	right: 0;
+	border-radius: 50%;	
+	left:132px;*/
+}
 .grid{
-	background: url(../img/bg-grid.png);
+	/*background: url(../img/bg-grid.png);
 	height: 200px;
 	width:100%;
-	/*z-index: 1000;*/
+	z-index: 1000;
 	position: absolute;
 	margin-top: -200px;
 	background-repeat:repeat;
-	right:0;
+	right:0;*/
 }
 .grid-250{
-	width:200px;
-	left: 140px;
+	/*width:200px;*/
+	/*left: 168px;*/
 }
 
 #chart_domains {
