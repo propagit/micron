@@ -712,13 +712,14 @@ label{
 }
 .modal-backdrop-alt{
 	margin-left:225px;
-	margin-top:32px;	
+	margin-top:28px;	
 }
 .page-modal{
-	top: 32px;
+	top: 28px;
 	width: 100%;
 	padding-left: 300px;
 	min-height: 600px;
+	overflow-y:scroll;
 }
 .page-modal .modal-header{
 	border-bottom:none;	
@@ -748,7 +749,7 @@ label{
 
 .modal-backdrop-alt-2{
 	margin-left:225px;
-	margin-top:32px;	
+	margin-top:28px;	
 	z-index:1050;
 }
 .page-modal-2{
